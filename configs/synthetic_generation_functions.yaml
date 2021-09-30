@@ -1,0 +1,44 @@
+name: "synthetic_functions_generation"
+# Functions
+F1:
+  amp: 3
+  frec: 0.01
+  interval: [0, 100]
+  shift: 0
+  char_to_plot: 'x'
+  color_to_plot: 'red'
+  train_num_samples: 3000
+  test_num_samples: 500
+
+F2:
+  amp: 3
+  frec: 0.01
+  interval: [0, 100]
+  shift: 30
+  char_to_plot: 'o'
+  color_to_plot: 'green'
+  train_num_samples: 3000
+  test_num_samples: 500
+
+data:
+  save: True
+  plot: True
+  normalize: False
+  scale: True
+  scale_factor: 10
+  transformation: False
+  train:
+    path: "./data/synthetic_functions/train/"
+  test:
+    path: "./data/synthetic_functions/test/"
+  plots:
+    path: "./data/synthetic_functions/plots/"
+
+# transformation to bring data to higher-dimensional space
+transformation:
+  non_linear: sigmoid
+  list_dimensions:
+    - [10, 2]
+    - [50, 10]
+    - [100, 50]
+

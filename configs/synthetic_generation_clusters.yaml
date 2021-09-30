@@ -1,0 +1,27 @@
+name: "synthetic_generation_clusters"
+clusters:
+#  centers:
+#    - [-100, -100]
+#    - [-100, 100]
+  num_centers: 2
+  center_box: [-100, 100]
+  cluster_std: 10
+  random_state: 1
+#  std_centers: [10,10]
+  dim: 2
+data:
+
+  save: True
+  plot: True
+  normalize: False
+  scale: True
+  scale_factor: 10
+  train:
+    path: "./data/synthetic_clusters/train/"
+    num_samples: 5000
+  test:
+    path: "./data/synthetic_clusters/test/"
+    num_samples: 1000
+  plots:
+    path: "./data/synthetic_clusters/plots/"
+

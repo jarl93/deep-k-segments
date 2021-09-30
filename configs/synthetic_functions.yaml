@@ -1,0 +1,51 @@
+name: "synthetic_functions"
+
+data:
+  data_set: "synthetic_functions"
+  train: "./data/synthetic/train/"
+  test: "./data/synthetic/test/"
+  num_classes: 2
+
+train:
+  batch_size: 128
+  num_epochs: 100
+
+  # scalar hyperparameters for the regularization terms
+  lambda: 0.001 # scalar for reg_L1
+  beta: 0.01  # scalar for reg_entropy
+  gamma: 1  # scalar for reg_KL
+  rho: 0.5
+  # boolean hyperparameters to activate different kind of regularization
+  reg_L1: False
+  reg_KL: False
+  reg_entropy: True
+
+  lr: 0.0001
+  batch_frequency_loss: 1
+
+test:
+  #mode_forced: "train"
+  mode_forced: "test"
+  batch_size: 128
+
+model:
+  path: "./models/synthetic/"
+  name: "model_identity_both"
+  save: True
+  device: 'cpu' # it could be 'cpu' or 'cuda'
+  encoder:
+    layer_sizes: [100, 64, 32]
+    last_nn_layer: "Identity"  # it could be one from {'Identity', 'Softmax', 'ReLU'}
+
+  decoder:
+    layer_sizes: [32, 64, 100]
+    last_nn_layer: "Identity"  # it could be one from {'Identity', 'Softmax', 'ReLU'}
+
+  input_dim: 100
+  latent_dim: 2
+
+tracing:
+  show_images: False
+  images_to_show: 0
+  visualize_latent: True
+  batch_frequency: 10

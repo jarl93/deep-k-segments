@@ -1,0 +1,60 @@
+name: real_mnist_06
+data:
+  data_set: mnist
+  train: ./data/mnist/
+  test: ./data/mnist/
+  validation: True
+  percentage_data_train: 0.01
+  num_classes: 10
+train:
+  batch_size: 256
+  num_epochs: 200
+  epochs_warmup: 0
+  annealing_frequency_change: 5
+  alpha_type: annealing
+  alpha_init: 0.1
+  beta_type: fixed
+  beta_init: 0.001000
+  gamma_type: fixed
+  gamma_init: 0.000100
+  lambda: 0.000001
+  init_strategy: fixed_length_random
+  min_init: -1
+  diff_init: 2
+  percentage_K: 0.1
+  type_loss: log_dist
+  type_rep: segments
+  fixed_length_start: 0.5
+  lr: 0.001
+  batch_frequency_loss: 1
+  evolution : True
+  epochs_frequency_evolution : 20
+  save_evolution : True
+test:
+  mode_forced: test
+  batch_size: 256
+model:
+  path: ./models/real_mnist/06/
+  evolution_path: ./models/real_mnist_evolution/06/
+  name: model_real_mnist_06
+  save: True
+  device: cpu
+  encoder:
+    layer_sizes: [784, 500, 500, 2000]
+    last_nn_layer: Identity
+  decoder:
+    layer_sizes: [2000, 500, 500, 784]
+    last_nn_layer: Identity
+  input_dim: 784
+  latent_dim: 10
+tracing:
+  log_name: real_mnist_06
+  show_images: False
+  images_to_show: 10
+  visualize_latent: True
+  x_interval: [-1, 1]
+  y_interval: [-1, 1]
+  delta_interval: 0.01
+  levels_contour: 20
+  batch_frequency: 10
+  num_points_inter: 10

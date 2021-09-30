@@ -1,0 +1,50 @@
+name: "synthetic_clusters"
+
+data:
+  data_set: "synthetic_clusters"
+  train: "./data/synthetic_clusters/train/"
+  test: "./data/synthetic_clusters/test/"
+  num_classes: 2
+
+train:
+  batch_size: 128
+  num_epochs: 100
+  # min and max for temperature hyperparameter
+  alpha_min: 0.01
+  alpha_max: 0.5
+  # scalar hyperparameters for the regularization terms
+  beta: 0.01 # scalar for loss of membership and distance to the clusters
+  lambda: 0.001  # scalar for L1 regularization
+  lr: 0.001
+  batch_frequency_loss: 1
+
+test:
+  #mode_forced: "train"
+  mode_forced: "test"
+  batch_size: 128
+
+model:
+  path: "./models/synthetic_clusters/"
+  name: "model_clusters"
+  save: True
+  device: 'cpu' # it could be 'cpu' or 'cuda'
+  encoder:
+    layer_sizes: [2, 2]
+    last_nn_layer: "Identity"  # it could be one from {'Identity', 'Softmax', 'ReLU'}
+
+  decoder:
+    layer_sizes: [2, 2]
+    last_nn_layer: "Identity"  # it could be one from {'Identity', 'Softmax', 'ReLU'}
+
+  input_dim: 2
+  latent_dim: 2
+
+tracing:
+  show_images: False
+  images_to_show: 0
+  visualize_latent: True
+  x_interval: [-1, 1]
+  y_interval: [-1, 1]
+  delta_interval: 0.01
+  levels_contour: 20
+  batch_frequency: 10

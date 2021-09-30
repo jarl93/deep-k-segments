@@ -1,0 +1,63 @@
+name: synthetic_functions_03
+data:
+  data_set: synthetic_functions
+  train: ./data/synthetic_functions/train/01/
+  test: ./data/synthetic_functions/test/01/
+  validation: True
+  full_training: True
+  num_classes: 2
+train:
+  num_iterations: 3
+  batch_size: 256
+  num_epochs: 150
+  epochs_warmup: 50
+  annealing_frequency_change: 1
+  alpha_type: fixed
+  alpha_init: 1000
+  beta_type: fixed
+  beta_init: 0.010000000
+  gamma_type: fixed
+  gamma_init: 0.000100000
+  lambda: 0.000001
+  init_strategy: ksegments
+  min_init: -1
+  diff_init: 2
+  space_init: latent
+  scheme_train: pretraining
+  percentage_K: 0.1
+  type_loss: log_dist
+  type_rep: segments
+  fixed_length_start: 0.5
+  lr: 0.001
+  batch_frequency_loss: 1
+  evolution : False
+  epochs_frequency_evolution : 50
+  save_evolution : False
+test:
+  mode_forced: test
+  batch_size: 256
+model:
+  path: ./models/synthetic_functions/03/
+  evolution_path: ./models/synthetic_functions_evolution/03/
+  name: model_synthetic_functions_03
+  save: True
+  device: cpu
+  encoder:
+    layer_sizes: [2]
+    last_nn_layer: Identity
+  decoder:
+    layer_sizes: [2]
+    last_nn_layer: Identity
+  input_dim: 2
+  latent_dim: 2
+tracing:
+  log_name: synthetic_functions_03
+  show_images: False
+  images_to_show: 10
+  visualize_latent: True
+  x_interval: [-1, 1]
+  y_interval: [-1, 1]
+  delta_interval: 0.01
+  levels_contour: 20
+  batch_frequency: 10
+  num_points_inter: 10

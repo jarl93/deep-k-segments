@@ -1,0 +1,55 @@
+name: basic_benchmarking_03
+data:
+  data_set: basic_benchmarking
+  train: ./data/basic_benchmarking/03/train/
+  test: ./data/basic_benchmarking/03/test/
+  train_data: ./data/basic_benchmarking/03/train/s3.txt
+  train_centers: ./data/basic_benchmarking/03/train/s3-cb.txt
+  train_labels: ./data/basic_benchmarking/03/train/s3-label.txt
+  num_classes: 15
+  dist_classes: 50/50
+train:
+  batch_size: 128
+  num_epochs: 300
+  alpha_init: 0.1
+  alpha_frequency_change: 5
+  beta_type: fixed
+  beta_min: 0.0001
+  beta_max: 0.001
+  beta_fixed: 0.1
+  gamma: 1
+  lambda: 0.001
+  init_strategy: forgy
+  type_loss: dist
+  type_rep: points
+  lr: 0.001
+  batch_frequency_loss: 1
+  evolution : True
+  epochs_frequency_evolution : 20
+  save_evolution : True
+test:
+  mode_forced: test
+  batch_size: 128
+model:
+  path: ./models/basic_benchmarking/03/
+  evolution_path: ./models/basic_benchmarking_evolution/03/
+  name: model_basic_benchmarking_03
+  save: True
+  device: cpu
+  encoder:
+    layer_sizes: [2]
+    last_nn_layer: Identity
+  decoder:
+    layer_sizes: [2]
+    last_nn_layer: Identity
+  input_dim: 2
+  latent_dim: 2
+tracing:
+  show_images: False
+  images_to_show: 10
+  visualize_latent: True
+  x_interval: [-1, 1]
+  y_interval: [-1, 1]
+  delta_interval: 0.01
+  levels_contour: 20
+  batch_frequency: 10

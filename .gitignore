@@ -1,0 +1,8 @@
+.DS_store
+.idea
+kcurves/__pycache__/
+.ipynb_checkpoints/
+./data/
+./tests/
+./logs_tests_GPU_server/
+./notebooks/

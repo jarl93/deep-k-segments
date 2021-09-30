@@ -1,0 +1,19 @@
+name: synthetic_clusters_generation_03
+clusters:
+  num_centers: 2
+  center_box: [-100, 100]
+  cluster_std: 5
+  random_state: 0
+  dim: 2
+data:
+  save: True
+  plot: True
+  normalize: True
+  train:
+    path: ./data/synthetic_clusters/train/03/
+    num_samples: 5000
+  test:
+    path: ./data/synthetic_clusters/test/03/
+    num_samples: 1000
+  plots:
+    path: ./data/synthetic_clusters/plots/03/

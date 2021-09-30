@@ -1,0 +1,63 @@
+name: synthetic_clusters_08
+data:
+  data_set: synthetic_clusters
+  train: ./data/synthetic_clusters/train/01/
+  test: ./data/synthetic_clusters/test/01/
+  validation: True
+  full_training: True
+  num_classes: 2
+train:
+  num_iterations: 1
+  batch_size: 256
+  num_epochs: 200
+  epochs_warmup: 0
+  annealing_frequency_change: 5
+  alpha_type: annealing
+  alpha_init: 0.1
+  beta_type: fixed
+  beta_init: 0.100000000
+  gamma_type: fixed
+  gamma_init: 0.000000100000
+  lambda: 0.000000
+  init_strategy: fixed_length_random
+  min_init: -1
+  diff_init: 2
+  space_init: latent
+  scheme_train: annealing
+  percentage_K: 0.5
+  type_loss: log_dist
+  type_rep: segments
+  fixed_length_start: 0.5
+  lr: 0.001
+  batch_frequency_loss: 1
+  evolution : True
+  epochs_frequency_evolution : 20
+  save_evolution : True
+test:
+  mode_forced: test
+  batch_size: 256
+model:
+  path: ./models/synthetic_clusters/08/
+  evolution_path: ./models/synthetic_clusters_evolution/08/
+  name: model_synthetic_clusters_08
+  save: True
+  device: cpu
+  encoder:
+    layer_sizes: [2]
+    last_nn_layer: Identity
+  decoder:
+    layer_sizes: [2]
+    last_nn_layer: Identity
+  input_dim: 2
+  latent_dim: 2
+tracing:
+  log_name: synthetic_clusters_08
+  show_images: False
+  images_to_show: 10
+  visualize_latent: True
+  x_interval: [-1, 1]
+  y_interval: [-1, 1]
+  delta_interval: 0.01
+  levels_contour: 20
+  batch_frequency: 10
+  num_points_inter: 10

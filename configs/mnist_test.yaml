@@ -1,0 +1,59 @@
+name: "mnist_test"
+
+data:
+  data_set: "mnist"
+  train: "./data/mnist/"
+  test: "./data/mnist/"
+  num_classes: 10
+
+train:
+  batch_size: 256
+  num_epochs: 200
+  epochs_warmup: 40
+  annealing_frequency_change: 5
+  alpha_init: 0.1
+  beta_type: fixed
+  beta_init: 0.001
+  gamma_type: fixed
+  gamma_init: 0.001
+  lambda: 0.001
+  init_strategy: forgy
+  percentage_K: 0.1
+  type_loss: dist
+  type_rep: points
+  fixed_length_start: 0.5
+  lr: 0.001
+  batch_frequency_loss: 1
+  evolution : True
+  epochs_frequency_evolution : 20
+  save_evolution : True
+
+test:
+  mode_forced: train
+  batch_size: 256
+
+model:
+  path: ./models/mnist/
+  evolution_path: ./models/mnist_evolution/
+  name: model_mnist
+  save: True
+  device: cuda # cuda or cpu
+  encoder:
+    layer_sizes: [784, 500, 500, 2000]
+    last_nn_layer: Identity
+  decoder:
+    layer_sizes: [2000, 500, 500, 784]
+    last_nn_layer: Identity
+  input_dim: 784
+  latent_dim: 10
+
+tracing:
+  show_images: True
+  images_to_show: 10
+  visualize_latent: True
+  x_interval: [-1, 1]
+  y_interval: [-1, 1]
+  delta_interval: 0.01
+  levels_contour: 20
+  batch_frequency: 10
+  num_points_inter: 11
