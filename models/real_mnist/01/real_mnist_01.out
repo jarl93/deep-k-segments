@@ -1,0 +1,1129 @@
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Loading dataset...
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+(710, 784)
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+X shape:  (700, 784)
+rep shape:  (10, 784)
+X shape:  (700, 784)
+rep shape:  (10, 1568)
+X shape:  (700, 10)
+rep shape:  (10, 20)
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+X shape:  (700, 784)
+rep shape:  (10, 784)
+i = 0, X_full shape = (710, 784)
+X shape:  (700, 784)
+rep shape:  (10, 1568)
+i = 1, X_full shape = (810, 784)
+X shape:  (700, 10)
+rep shape:  (10, 20)
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+i = 0, X_full shape = (710, 784)
+i = 1, X_full shape = (810, 784)
+i = 2, X_full shape = (810, 10)
+i = 3, X_full shape = (710, 10)
+Running PCA...
+Running PCA...
+Runnning TSNE...
+Runnning TSNE...
+Loading dataset...
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+i = 0, X_full shape = (710, 784)
+i = 1, X_full shape = (810, 784)
+i = 2, X_full shape = (810, 10)
+i = 3, X_full shape = (710, 10)
+Running PCA...
+Running PCA...
+Runnning TSNE...
+Runnning TSNE...
+i = 0, X_full shape = (700, 2)
+Loading dataset...
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+i = 0, X_full shape = (710, 784)
+i = 1, X_full shape = (810, 784)
+i = 2, X_full shape = (810, 10)
+i = 3, X_full shape = (710, 10)
+Running PCA...
+Running PCA...
+Runnning TSNE...
+Runnning TSNE...
+i = 0, X_full shape = (710, 2)
+i = 1, X_full shape = (810, 2)
+i = 2, X_full shape = (810, 2)
+i = 3, X_full shape = (710, 2)
+Loading dataset...
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+i = 0, X_full shape = (710, 784)
+i = 1, X_full shape = (810, 784)
+i = 2, X_full shape = (810, 10)
+i = 3, X_full shape = (710, 10)
+Running PCA...
+Running PCA...
+Runnning TSNE...
+Runnning TSNE...
+i = 0, X_full shape = (710, 2)
+i = 1, X_full shape = (810, 2)
+i = 2, X_full shape = (810, 2)
+i = 3, X_full shape = (710, 2)
+shape X =  (700, 2)
+Shape rep =  (2,)
+s_inter is None
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+i = 0, X_full shape = (710, 784)
+i = 1, X_full shape = (810, 784)
+i = 2, X_full shape = (810, 10)
+i = 3, X_full shape = (710, 10)
+Running PCA...
+Running PCA...
+Runnning TSNE...
+Runnning TSNE...
+i = 0, X_full shape = (710, 2)
+i = 1, X_full shape = (810, 2)
+i = 2, X_full shape = (810, 2)
+i = 3, X_full shape = (710, 2)
+shape X =  (700, 2)
+Shape rep =  (1, 2)
+s_inter is None
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+i = 0, X_full shape = (710, 784)
+i = 1, X_full shape = (810, 784)
+i = 2, X_full shape = (810, 10)
+i = 3, X_full shape = (710, 10)
+Running PCA...
+Running PCA...
+Runnning TSNE...
+Runnning TSNE...
+i = 0, X_full shape = (710, 2)
+i = 1, X_full shape = (810, 2)
+i = 2, X_full shape = (810, 2)
+i = 3, X_full shape = (710, 2)
+shape X =  (700, 2)
+Shape rep =  (1, 2)
+s_inter is None
+Loading dataset...
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+i = 0, X_full shape = (710, 784)
+i = 1, X_full shape = (810, 784)
+i = 2, X_full shape = (810, 10)
+i = 3, X_full shape = (710, 10)
+Running PCA...
+Running PCA...
+Runnning TSNE...
+Runnning TSNE...
+i = 0, X_full shape = (710, 2)
+i = 1, X_full shape = (810, 2)
+i = 2, X_full shape = (810, 2)
+i = 3, X_full shape = (710, 2)
+shape X =  (700, 2)
+Shape rep =  (1, 20)
+s_inter is None
+Loading dataset...
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+i = 0, X_full shape = (710, 784)
+i = 1, X_full shape = (810, 784)
+i = 2, X_full shape = (810, 10)
+i = 3, X_full shape = (710, 10)
+Running PCA...
+Running PCA...
+Runnning TSNE...
+Runnning TSNE...
+i = 0, X_full shape = (710, 2)
+i = 1, X_full shape = (810, 2)
+i = 2, X_full shape = (810, 2)
+i = 3, X_full shape = (710, 2)
+shape X =  (700, 2)
+Shape rep =  (10, 2)
+s_inter is None
+shape X =  (700, 2)
+Shape rep =  (10, 2)
+s_inter is None
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+i = 0, X_full shape = (710, 784)
+i = 1, X_full shape = (810, 784)
+i = 2, X_full shape = (810, 10)
+i = 3, X_full shape = (710, 10)
+Running PCA...
+Running PCA...
+Runnning TSNE...
+Runnning TSNE...
+i = 0, X_full shape = (710, 2)
+i = 1, X_full shape = (810, 2)
+i = 2, X_full shape = (810, 2)
+i = 3, X_full shape = (710, 2)
+shape X =  (700, 2)
+Shape rep =  (10, 2)
+s_inter is None
+shape X =  (700, 2)
+Shape rep =  (10, 2)
+Shape s_inter =  (90, 2)
+Loading dataset...
+Shape X_train:  (700, 784)
+Shape Y_train:  (700,)
+Shape X_test:  (7000, 784)
+Shape Y_test:  (7000,)
+Dataset loaded!
+Initialization of the model...
+rep_init shape:  (10, 20)
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=784, out_features=500, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=500, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=2000, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=2000, out_features=10, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList(
+      (0): Linear(in_features=10, out_features=2000, bias=True)
+      (1): ReLU()
+      (2): Linear(in_features=2000, out_features=500, bias=True)
+      (3): ReLU()
+      (4): Linear(in_features=500, out_features=500, bias=True)
+      (5): ReLU()
+    )
+    (out): Linear(in_features=500, out_features=784, bias=True)
+  )
+)
+Starting training on mnist...
+Starting lap 01 for evolution on mnist data in mode train...
+shape of s torch.Size([1, 20])
+shape of s torch.Size([2, 20])
+shape of s torch.Size([3, 20])
+shape of s torch.Size([4, 20])
+shape of s torch.Size([5, 20])
+shape of s torch.Size([6, 20])
+shape of s torch.Size([7, 20])
+shape of s torch.Size([8, 20])
+shape of s torch.Size([9, 20])
+s1 shape:  torch.Size([90, 10])
+s2 shape:  torch.Size([90, 10])
+s_alphas shape:  torch.Size([90, 10])
+s1 shape:  torch.Size([10, 10])
+s2 shape:  torch.Size([10, 10])
+shape s_inter_rec_np =  (90, 784)
+i = 0, X_full shape = (710, 784)
+i = 1, X_full shape = (810, 784)
+i = 2, X_full shape = (810, 10)
+i = 3, X_full shape = (710, 10)
+Running PCA...
+Running PCA...
+Runnning TSNE...
+Runnning TSNE...
+i = 0, X_full shape = (710, 2)
+i = 1, X_full shape = (810, 2)
+i = 2, X_full shape = (810, 2)
+i = 3, X_full shape = (710, 2)
+shape X =  (700, 2)
+Shape rep =  (10, 2)
+s_inter is None
+shape X =  (700, 2)
+Shape rep =  (20, 2)
+Shape s_inter =  (90, 2)
+shape X =  (700, 2)
+Shape rep =  (20, 2)
+Shape s_inter =  (90, 2)
+shape X =  (700, 2)
+Shape rep =  (10, 2)
+s_inter is None
+['purity = 0.201', 'NMI = 0.093', 'ARI = 0.03']
+Lap 01 for evolution DONE!
+Train epoch = 0, beta = 0.0001, alpha = 0.1
+2021-04-20 20:20:33.625119	Train Epoch: 0 [0/700 (0%)]	Loss: 0.108360
+====> Epoch: 0 Average loss: 0.1531
+Train epoch = 1, beta = 0.0001, alpha = 0.1
+2021-04-20 20:20:34.016499	Train Epoch: 1 [0/700 (0%)]	Loss: 0.082672
+====> Epoch: 1 Average loss: 0.1185
+Train epoch = 2, beta = 0.0001, alpha = 0.1
+2021-04-20 20:20:34.393105	Train Epoch: 2 [0/700 (0%)]	Loss: 0.069011
+====> Epoch: 2 Average loss: 0.1028
+Train epoch = 3, beta = 0.0001, alpha = 0.1
+2021-04-20 20:20:34.784531	Train Epoch: 3 [0/700 (0%)]	Loss: 0.067791
+====> Epoch: 3 Average loss: 0.1011
+Train epoch = 4, beta = 0.0001, alpha = 0.42320861065570825
+2021-04-20 20:20:35.157788	Train Epoch: 4 [0/700 (0%)]	Loss: 0.065898
+====> Epoch: 4 Average loss: 0.0991
+Train epoch = 5, beta = 0.0001, alpha = 0.42320861065570825
+2021-04-20 20:20:35.554272	Train Epoch: 5 [0/700 (0%)]	Loss: 0.066234
+====> Epoch: 5 Average loss: 0.0970
+Train epoch = 6, beta = 0.0001, alpha = 0.42320861065570825
+2021-04-20 20:20:35.935151	Train Epoch: 6 [0/700 (0%)]	Loss: 0.063177
+====> Epoch: 6 Average loss: 0.0956
+Train epoch = 7, beta = 0.0001, alpha = 0.42320861065570825
+2021-04-20 20:20:36.313722	Train Epoch: 7 [0/700 (0%)]	Loss: 0.065689
+====> Epoch: 7 Average loss: 0.0936
+Train epoch = 8, beta = 0.0001, alpha = 0.42320861065570825
+2021-04-20 20:20:36.689187	Train Epoch: 8 [0/700 (0%)]	Loss: 0.060442
+====> Epoch: 8 Average loss: 0.0914
+Train epoch = 9, beta = 0.0001, alpha = 0.7515684111296623
+2021-04-20 20:20:37.067703	Train Epoch: 9 [0/700 (0%)]	Loss: 0.060291
+====> Epoch: 9 Average loss: 0.0887
+Train epoch = 10, beta = 0.0001, alpha = 0.7515684111296623
+2021-04-20 20:20:37.442236	Train Epoch: 10 [0/700 (0%)]	Loss: 0.057386
+====> Epoch: 10 Average loss: 0.0856
+Train epoch = 11, beta = 0.0001, alpha = 0.7515684111296623
+2021-04-20 20:20:37.817249	Train Epoch: 11 [0/700 (0%)]	Loss: 0.056477
+====> Epoch: 11 Average loss: 0.0827
+Train epoch = 12, beta = 0.0001, alpha = 0.7515684111296623
+2021-04-20 20:20:38.199498	Train Epoch: 12 [0/700 (0%)]	Loss: 0.054482
+====> Epoch: 12 Average loss: 0.0801
+Train epoch = 13, beta = 0.0001, alpha = 0.7515684111296623
+2021-04-20 20:20:38.585561	Train Epoch: 13 [0/700 (0%)]	Loss: 0.052247
+====> Epoch: 13 Average loss: 0.0771
+Train epoch = 14, beta = 0.0001, alpha = 1.077971160195895
+2021-04-20 20:20:38.965339	Train Epoch: 14 [0/700 (0%)]	Loss: 0.051487
+====> Epoch: 14 Average loss: 0.0768
+Train epoch = 15, beta = 0.0001, alpha = 1.077971160195895
+2021-04-20 20:20:39.351144	Train Epoch: 15 [0/700 (0%)]	Loss: 0.050614
+====> Epoch: 15 Average loss: 0.0736
+Train epoch = 16, beta = 0.0001, alpha = 1.077971160195895
+2021-04-20 20:20:39.729580	Train Epoch: 16 [0/700 (0%)]	Loss: 0.048880
+====> Epoch: 16 Average loss: 0.0699
+Train epoch = 17, beta = 0.0001, alpha = 1.077971160195895
+2021-04-20 20:20:40.108657	Train Epoch: 17 [0/700 (0%)]	Loss: 0.043843
+====> Epoch: 17 Average loss: 0.0675
+Train epoch = 18, beta = 0.0001, alpha = 1.077971160195895
+2021-04-20 20:20:40.482982	Train Epoch: 18 [0/700 (0%)]	Loss: 0.043348
+====> Epoch: 18 Average loss: 0.0650
+Train epoch = 19, beta = 0.0001, alpha = 1.4087110115785935
+2021-04-20 20:20:40.859248	Train Epoch: 19 [0/700 (0%)]	Loss: 0.042187
+====> Epoch: 19 Average loss: 0.0628
+Starting lap 02 for evolution on mnist data in mode train...

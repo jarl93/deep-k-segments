@@ -1,0 +1,1175 @@
+Loading dataset synthetic_functions...
+Shape X_train:  (6000, 2)
+Shape Y_train:  (6000,)
+Shape X_test:  (1000, 2)
+Shape Y_test:  (1000,)
+Dataset loaded!
+Initialization of the model...
+Scheme train: annealing
+Rep init type: fixed_length_random
+Space init: latent
+Type loss: log_dist
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList()
+    (out): Linear(in_features=2, out_features=2, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList()
+    (out): Linear(in_features=2, out_features=2, bias=True)
+  )
+)
+Starting training on synthetic_functions...
+Starting lap 1 for evolution on synthetic_functions data in mode train...
+Running k-means...
+Running k-means...
+shape of s torch.Size([2, 4])
+Running k-segments...
+s1 shape:  torch.Size([18, 2])
+s2 shape:  torch.Size([18, 2])
+s_alphas shape:  torch.Size([18, 2])
+s1 shape:  torch.Size([18, 2])
+s2 shape:  torch.Size([18, 2])
+s_alphas shape:  torch.Size([18, 2])
+s1 shape:  torch.Size([2, 2])
+s2 shape:  torch.Size([2, 2])
+shape s_inter_rec_np =  (18, 2)
+i = 0, X_full shape = (6002, 2)
+i = 1, X_full shape = (6022, 2)
+i = 2, X_full shape = (6022, 2)
+i = 3, X_full shape = (6002, 2)
+i = 4, X_full shape = (6020, 2)
+i = 0, X_full shape = (6002, 2)
+i = 1, X_full shape = (6022, 2)
+i = 2, X_full shape = (6022, 2)
+i = 3, X_full shape = (6002, 2)
+i = 4, X_full shape = (6020, 2)
+['ACC = 1.0', 'NMI = 1.0', 'ARI = 1.0']
+Lap 1 for evolution DONE!
+Train epoch = 0, alpha = 0.1, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:53.091432	Train Epoch: 0 [0/6000 (0%)]	Loss: 2.167423
+2021-05-16 00:17:53.177571	Train Epoch: 0 [2560/6000 (43%)]	Loss: 2.028868
+2021-05-16 00:17:53.264602	Train Epoch: 0 [5120/6000 (87%)]	Loss: 1.948637
+====> Epoch: 0 Average loss: 2.1248
+Train epoch = 1, alpha = 0.1, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:53.298194	Train Epoch: 1 [0/6000 (0%)]	Loss: 1.899518
+2021-05-16 00:17:53.388502	Train Epoch: 1 [2560/6000 (43%)]	Loss: 1.935191
+2021-05-16 00:17:53.481405	Train Epoch: 1 [5120/6000 (87%)]	Loss: 1.899260
+====> Epoch: 1 Average loss: 1.9648
+Train epoch = 2, alpha = 0.1, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:53.512502	Train Epoch: 2 [0/6000 (0%)]	Loss: 1.821253
+2021-05-16 00:17:53.605788	Train Epoch: 2 [2560/6000 (43%)]	Loss: 1.688194
+2021-05-16 00:17:53.694924	Train Epoch: 2 [5120/6000 (87%)]	Loss: 1.666564
+====> Epoch: 2 Average loss: 1.8271
+Train epoch = 3, alpha = 0.1, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:53.737692	Train Epoch: 3 [0/6000 (0%)]	Loss: 1.632751
+2021-05-16 00:17:53.828877	Train Epoch: 3 [2560/6000 (43%)]	Loss: 1.737823
+2021-05-16 00:17:53.917190	Train Epoch: 3 [5120/6000 (87%)]	Loss: 1.623265
+====> Epoch: 3 Average loss: 1.7042
+Train epoch = 4, alpha = 0.42320861065570825, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:53.955296	Train Epoch: 4 [0/6000 (0%)]	Loss: 1.561963
+2021-05-16 00:17:54.052079	Train Epoch: 4 [2560/6000 (43%)]	Loss: 1.553577
+2021-05-16 00:17:54.139668	Train Epoch: 4 [5120/6000 (87%)]	Loss: 1.476829
+====> Epoch: 4 Average loss: 1.5975
+Train epoch = 5, alpha = 0.42320861065570825, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:54.174049	Train Epoch: 5 [0/6000 (0%)]	Loss: 1.464995
+2021-05-16 00:17:54.268470	Train Epoch: 5 [2560/6000 (43%)]	Loss: 1.429913
+2021-05-16 00:17:54.360098	Train Epoch: 5 [5120/6000 (87%)]	Loss: 1.333087
+====> Epoch: 5 Average loss: 1.4934
+Train epoch = 6, alpha = 0.42320861065570825, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:54.399881	Train Epoch: 6 [0/6000 (0%)]	Loss: 1.405684
+2021-05-16 00:17:54.496076	Train Epoch: 6 [2560/6000 (43%)]	Loss: 1.325904
+2021-05-16 00:17:54.586161	Train Epoch: 6 [5120/6000 (87%)]	Loss: 1.302491
+====> Epoch: 6 Average loss: 1.4056
+Train epoch = 7, alpha = 0.42320861065570825, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:54.623076	Train Epoch: 7 [0/6000 (0%)]	Loss: 1.266969
+2021-05-16 00:17:54.713703	Train Epoch: 7 [2560/6000 (43%)]	Loss: 1.305081
+2021-05-16 00:17:54.803922	Train Epoch: 7 [5120/6000 (87%)]	Loss: 1.158308
+====> Epoch: 7 Average loss: 1.3190
+Train epoch = 8, alpha = 0.42320861065570825, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:54.838771	Train Epoch: 8 [0/6000 (0%)]	Loss: 1.223943
+2021-05-16 00:17:54.938078	Train Epoch: 8 [2560/6000 (43%)]	Loss: 1.209542
+2021-05-16 00:17:55.028773	Train Epoch: 8 [5120/6000 (87%)]	Loss: 1.179997
+====> Epoch: 8 Average loss: 1.2431
+Train epoch = 9, alpha = 0.7515684111296623, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:55.066145	Train Epoch: 9 [0/6000 (0%)]	Loss: 1.135526
+2021-05-16 00:17:55.207518	Train Epoch: 9 [2560/6000 (43%)]	Loss: 1.133121
+2021-05-16 00:17:55.324109	Train Epoch: 9 [5120/6000 (87%)]	Loss: 1.137586
+====> Epoch: 9 Average loss: 1.1740
+Train epoch = 10, alpha = 0.7515684111296623, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:55.372470	Train Epoch: 10 [0/6000 (0%)]	Loss: 1.009898
+2021-05-16 00:17:55.479974	Train Epoch: 10 [2560/6000 (43%)]	Loss: 1.058357
+2021-05-16 00:17:55.574095	Train Epoch: 10 [5120/6000 (87%)]	Loss: 0.995080
+====> Epoch: 10 Average loss: 1.1136
+Train epoch = 11, alpha = 0.7515684111296623, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:55.615117	Train Epoch: 11 [0/6000 (0%)]	Loss: 1.110069
+2021-05-16 00:17:55.708311	Train Epoch: 11 [2560/6000 (43%)]	Loss: 1.023623
+2021-05-16 00:17:55.796823	Train Epoch: 11 [5120/6000 (87%)]	Loss: 1.002429
+====> Epoch: 11 Average loss: 1.0584
+Train epoch = 12, alpha = 0.7515684111296623, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:55.836149	Train Epoch: 12 [0/6000 (0%)]	Loss: 0.983372
+2021-05-16 00:17:55.928665	Train Epoch: 12 [2560/6000 (43%)]	Loss: 0.981728
+2021-05-16 00:17:56.064186	Train Epoch: 12 [5120/6000 (87%)]	Loss: 0.933704
+====> Epoch: 12 Average loss: 1.0083
+Train epoch = 13, alpha = 0.7515684111296623, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:56.108548	Train Epoch: 13 [0/6000 (0%)]	Loss: 0.942702
+2021-05-16 00:17:56.207508	Train Epoch: 13 [2560/6000 (43%)]	Loss: 0.961212
+2021-05-16 00:17:56.298799	Train Epoch: 13 [5120/6000 (87%)]	Loss: 0.894891
+====> Epoch: 13 Average loss: 0.9629
+Train epoch = 14, alpha = 1.077971160195895, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:56.334215	Train Epoch: 14 [0/6000 (0%)]	Loss: 0.891474
+2021-05-16 00:17:56.448038	Train Epoch: 14 [2560/6000 (43%)]	Loss: 0.894641
+2021-05-16 00:17:56.544712	Train Epoch: 14 [5120/6000 (87%)]	Loss: 0.859449
+====> Epoch: 14 Average loss: 0.9244
+Train epoch = 15, alpha = 1.077971160195895, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:56.583396	Train Epoch: 15 [0/6000 (0%)]	Loss: 0.861964
+2021-05-16 00:17:56.678849	Train Epoch: 15 [2560/6000 (43%)]	Loss: 0.839415
+2021-05-16 00:17:56.775989	Train Epoch: 15 [5120/6000 (87%)]	Loss: 0.821746
+====> Epoch: 15 Average loss: 0.8873
+Train epoch = 16, alpha = 1.077971160195895, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:56.813077	Train Epoch: 16 [0/6000 (0%)]	Loss: 0.818234
+2021-05-16 00:17:56.919956	Train Epoch: 16 [2560/6000 (43%)]	Loss: 0.809848
+2021-05-16 00:17:57.019571	Train Epoch: 16 [5120/6000 (87%)]	Loss: 0.820378
+====> Epoch: 16 Average loss: 0.8554
+Train epoch = 17, alpha = 1.077971160195895, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:57.057571	Train Epoch: 17 [0/6000 (0%)]	Loss: 0.822544
+2021-05-16 00:17:57.161564	Train Epoch: 17 [2560/6000 (43%)]	Loss: 0.805826
+2021-05-16 00:17:57.264232	Train Epoch: 17 [5120/6000 (87%)]	Loss: 0.736617
+====> Epoch: 17 Average loss: 0.8261
+Train epoch = 18, alpha = 1.077971160195895, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:57.308090	Train Epoch: 18 [0/6000 (0%)]	Loss: 0.762463
+2021-05-16 00:17:57.403561	Train Epoch: 18 [2560/6000 (43%)]	Loss: 0.753549
+2021-05-16 00:17:57.497020	Train Epoch: 18 [5120/6000 (87%)]	Loss: 0.772547
+====> Epoch: 18 Average loss: 0.8004
+Train epoch = 19, alpha = 1.4087110115785935, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:57.529275	Train Epoch: 19 [0/6000 (0%)]	Loss: 0.779102
+2021-05-16 00:17:57.617734	Train Epoch: 19 [2560/6000 (43%)]	Loss: 0.758896
+2021-05-16 00:17:57.705213	Train Epoch: 19 [5120/6000 (87%)]	Loss: 0.747373
+====> Epoch: 19 Average loss: 0.7759
+Train epoch = 20, alpha = 1.4087110115785935, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:57.740392	Train Epoch: 20 [0/6000 (0%)]	Loss: 0.734675
+2021-05-16 00:17:57.835256	Train Epoch: 20 [2560/6000 (43%)]	Loss: 0.705454
+2021-05-16 00:17:57.943349	Train Epoch: 20 [5120/6000 (87%)]	Loss: 0.712037
+====> Epoch: 20 Average loss: 0.7547
+Train epoch = 21, alpha = 1.4087110115785935, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:57.996255	Train Epoch: 21 [0/6000 (0%)]	Loss: 0.724512
+2021-05-16 00:17:58.088803	Train Epoch: 21 [2560/6000 (43%)]	Loss: 0.712098
+2021-05-16 00:17:58.189207	Train Epoch: 21 [5120/6000 (87%)]	Loss: 0.683553
+====> Epoch: 21 Average loss: 0.7338
+Train epoch = 22, alpha = 1.4087110115785935, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:58.228016	Train Epoch: 22 [0/6000 (0%)]	Loss: 0.710616
+2021-05-16 00:17:58.323058	Train Epoch: 22 [2560/6000 (43%)]	Loss: 0.682121
+2021-05-16 00:17:58.417268	Train Epoch: 22 [5120/6000 (87%)]	Loss: 0.684505
+====> Epoch: 22 Average loss: 0.7169
+Train epoch = 23, alpha = 1.4087110115785935, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:58.453913	Train Epoch: 23 [0/6000 (0%)]	Loss: 0.675753
+2021-05-16 00:17:58.543275	Train Epoch: 23 [2560/6000 (43%)]	Loss: 0.686392
+2021-05-16 00:17:58.636721	Train Epoch: 23 [5120/6000 (87%)]	Loss: 0.667203
+====> Epoch: 23 Average loss: 0.6995
+Train epoch = 24, alpha = 1.7481914085889256, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:58.671832	Train Epoch: 24 [0/6000 (0%)]	Loss: 0.650013
+2021-05-16 00:17:58.766805	Train Epoch: 24 [2560/6000 (43%)]	Loss: 0.659622
+2021-05-16 00:17:58.851189	Train Epoch: 24 [5120/6000 (87%)]	Loss: 0.643669
+====> Epoch: 24 Average loss: 0.6839
+Train epoch = 25, alpha = 1.7481914085889256, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:58.887283	Train Epoch: 25 [0/6000 (0%)]	Loss: 0.655340
+2021-05-16 00:17:59.005890	Train Epoch: 25 [2560/6000 (43%)]	Loss: 0.645525
+2021-05-16 00:17:59.094147	Train Epoch: 25 [5120/6000 (87%)]	Loss: 0.642733
+====> Epoch: 25 Average loss: 0.6699
+Train epoch = 26, alpha = 1.7481914085889256, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:59.138990	Train Epoch: 26 [0/6000 (0%)]	Loss: 0.636181
+2021-05-16 00:17:59.244168	Train Epoch: 26 [2560/6000 (43%)]	Loss: 0.637389
+2021-05-16 00:17:59.342058	Train Epoch: 26 [5120/6000 (87%)]	Loss: 0.606992
+====> Epoch: 26 Average loss: 0.6579
+Train epoch = 27, alpha = 1.7481914085889256, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:59.388180	Train Epoch: 27 [0/6000 (0%)]	Loss: 0.625996
+2021-05-16 00:17:59.504974	Train Epoch: 27 [2560/6000 (43%)]	Loss: 0.618349
+2021-05-16 00:17:59.603705	Train Epoch: 27 [5120/6000 (87%)]	Loss: 0.619029
+====> Epoch: 27 Average loss: 0.6452
+Train epoch = 28, alpha = 1.7481914085889256, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:59.641091	Train Epoch: 28 [0/6000 (0%)]	Loss: 0.624146
+2021-05-16 00:17:59.750666	Train Epoch: 28 [2560/6000 (43%)]	Loss: 0.612095
+2021-05-16 00:17:59.864531	Train Epoch: 28 [5120/6000 (87%)]	Loss: 0.590152
+====> Epoch: 28 Average loss: 0.6347
+Train epoch = 29, alpha = 2.0993673883731723, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:17:59.908063	Train Epoch: 29 [0/6000 (0%)]	Loss: 0.605386
+2021-05-16 00:18:00.014098	Train Epoch: 29 [2560/6000 (43%)]	Loss: 0.590307
+2021-05-16 00:18:00.127826	Train Epoch: 29 [5120/6000 (87%)]	Loss: 0.593452
+====> Epoch: 29 Average loss: 0.6244
+Train epoch = 30, alpha = 2.0993673883731723, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:00.175025	Train Epoch: 30 [0/6000 (0%)]	Loss: 0.575763
+2021-05-16 00:18:00.263040	Train Epoch: 30 [2560/6000 (43%)]	Loss: 0.587582
+2021-05-16 00:18:00.352380	Train Epoch: 30 [5120/6000 (87%)]	Loss: 0.582009
+====> Epoch: 30 Average loss: 0.6142
+Train epoch = 31, alpha = 2.0993673883731723, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:00.391235	Train Epoch: 31 [0/6000 (0%)]	Loss: 0.579255
+2021-05-16 00:18:00.482098	Train Epoch: 31 [2560/6000 (43%)]	Loss: 0.578156
+2021-05-16 00:18:00.572659	Train Epoch: 31 [5120/6000 (87%)]	Loss: 0.581423
+====> Epoch: 31 Average loss: 0.6059
+Train epoch = 32, alpha = 2.0993673883731723, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:00.609824	Train Epoch: 32 [0/6000 (0%)]	Loss: 0.581328
+2021-05-16 00:18:00.697387	Train Epoch: 32 [2560/6000 (43%)]	Loss: 0.571175
+2021-05-16 00:18:00.783331	Train Epoch: 32 [5120/6000 (87%)]	Loss: 0.566177
+====> Epoch: 32 Average loss: 0.5970
+Train epoch = 33, alpha = 2.0993673883731723, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:00.818529	Train Epoch: 33 [0/6000 (0%)]	Loss: 0.563944
+2021-05-16 00:18:00.912635	Train Epoch: 33 [2560/6000 (43%)]	Loss: 0.571984
+2021-05-16 00:18:01.001703	Train Epoch: 33 [5120/6000 (87%)]	Loss: 0.559580
+====> Epoch: 33 Average loss: 0.5898
+Train epoch = 34, alpha = 2.464368294574091, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:01.042432	Train Epoch: 34 [0/6000 (0%)]	Loss: 0.561996
+2021-05-16 00:18:01.134351	Train Epoch: 34 [2560/6000 (43%)]	Loss: 0.550285
+2021-05-16 00:18:01.224623	Train Epoch: 34 [5120/6000 (87%)]	Loss: 0.555895
+====> Epoch: 34 Average loss: 0.5824
+Train epoch = 35, alpha = 2.464368294574091, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:01.260868	Train Epoch: 35 [0/6000 (0%)]	Loss: 0.547942
+2021-05-16 00:18:01.358565	Train Epoch: 35 [2560/6000 (43%)]	Loss: 0.549306
+2021-05-16 00:18:01.445045	Train Epoch: 35 [5120/6000 (87%)]	Loss: 0.549659
+====> Epoch: 35 Average loss: 0.5752
+Train epoch = 36, alpha = 2.464368294574091, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:01.481487	Train Epoch: 36 [0/6000 (0%)]	Loss: 0.561385
+2021-05-16 00:18:01.573850	Train Epoch: 36 [2560/6000 (43%)]	Loss: 0.540894
+2021-05-16 00:18:01.661703	Train Epoch: 36 [5120/6000 (87%)]	Loss: 0.552941
+====> Epoch: 36 Average loss: 0.5688
+Train epoch = 37, alpha = 2.464368294574091, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:01.697213	Train Epoch: 37 [0/6000 (0%)]	Loss: 0.539293
+2021-05-16 00:18:01.792826	Train Epoch: 37 [2560/6000 (43%)]	Loss: 0.540760
+2021-05-16 00:18:01.877674	Train Epoch: 37 [5120/6000 (87%)]	Loss: 0.545474
+====> Epoch: 37 Average loss: 0.5630
+Train epoch = 38, alpha = 2.464368294574091, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:01.910394	Train Epoch: 38 [0/6000 (0%)]	Loss: 0.549991
+2021-05-16 00:18:01.997046	Train Epoch: 38 [2560/6000 (43%)]	Loss: 0.524941
+2021-05-16 00:18:02.091687	Train Epoch: 38 [5120/6000 (87%)]	Loss: 0.530197
+====> Epoch: 38 Average loss: 0.5571
+Train epoch = 39, alpha = 2.844848336696129, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:02.127318	Train Epoch: 39 [0/6000 (0%)]	Loss: 0.523351
+2021-05-16 00:18:02.227875	Train Epoch: 39 [2560/6000 (43%)]	Loss: 0.531600
+2021-05-16 00:18:02.325744	Train Epoch: 39 [5120/6000 (87%)]	Loss: 0.519210
+====> Epoch: 39 Average loss: 0.5510
+Train epoch = 40, alpha = 2.844848336696129, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:02.376247	Train Epoch: 40 [0/6000 (0%)]	Loss: 0.532813
+2021-05-16 00:18:02.482503	Train Epoch: 40 [2560/6000 (43%)]	Loss: 0.527478
+2021-05-16 00:18:02.570962	Train Epoch: 40 [5120/6000 (87%)]	Loss: 0.522031
+====> Epoch: 40 Average loss: 0.5458
+Train epoch = 41, alpha = 2.844848336696129, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:02.608597	Train Epoch: 41 [0/6000 (0%)]	Loss: 0.521007
+2021-05-16 00:18:02.694156	Train Epoch: 41 [2560/6000 (43%)]	Loss: 0.515504
+2021-05-16 00:18:02.785122	Train Epoch: 41 [5120/6000 (87%)]	Loss: 0.514677
+====> Epoch: 41 Average loss: 0.5407
+Train epoch = 42, alpha = 2.844848336696129, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:02.820353	Train Epoch: 42 [0/6000 (0%)]	Loss: 0.522437
+2021-05-16 00:18:02.916243	Train Epoch: 42 [2560/6000 (43%)]	Loss: 0.512814
+2021-05-16 00:18:03.004308	Train Epoch: 42 [5120/6000 (87%)]	Loss: 0.504009
+====> Epoch: 42 Average loss: 0.5360
+Train epoch = 43, alpha = 2.844848336696129, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:03.038053	Train Epoch: 43 [0/6000 (0%)]	Loss: 0.508598
+2021-05-16 00:18:03.127713	Train Epoch: 43 [2560/6000 (43%)]	Loss: 0.517169
+2021-05-16 00:18:03.216097	Train Epoch: 43 [5120/6000 (87%)]	Loss: 0.500456
+====> Epoch: 43 Average loss: 0.5310
+Train epoch = 44, alpha = 3.242178315324023, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:03.252673	Train Epoch: 44 [0/6000 (0%)]	Loss: 0.500983
+2021-05-16 00:18:03.344194	Train Epoch: 44 [2560/6000 (43%)]	Loss: 0.507258
+2021-05-16 00:18:03.435324	Train Epoch: 44 [5120/6000 (87%)]	Loss: 0.511552
+====> Epoch: 44 Average loss: 0.5260
+Train epoch = 45, alpha = 3.242178315324023, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:03.476709	Train Epoch: 45 [0/6000 (0%)]	Loss: 0.504558
+2021-05-16 00:18:03.578419	Train Epoch: 45 [2560/6000 (43%)]	Loss: 0.484361
+2021-05-16 00:18:03.676881	Train Epoch: 45 [5120/6000 (87%)]	Loss: 0.511986
+====> Epoch: 45 Average loss: 0.5218
+Train epoch = 46, alpha = 3.242178315324023, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:03.714386	Train Epoch: 46 [0/6000 (0%)]	Loss: 0.494366
+2021-05-16 00:18:03.817031	Train Epoch: 46 [2560/6000 (43%)]	Loss: 0.495724
+2021-05-16 00:18:03.915285	Train Epoch: 46 [5120/6000 (87%)]	Loss: 0.501303
+====> Epoch: 46 Average loss: 0.5173
+Train epoch = 47, alpha = 3.242178315324023, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:03.956571	Train Epoch: 47 [0/6000 (0%)]	Loss: 0.487831
+2021-05-16 00:18:04.050090	Train Epoch: 47 [2560/6000 (43%)]	Loss: 0.491984
+2021-05-16 00:18:04.156071	Train Epoch: 47 [5120/6000 (87%)]	Loss: 0.496221
+====> Epoch: 47 Average loss: 0.5127
+Train epoch = 48, alpha = 3.242178315324023, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:04.194533	Train Epoch: 48 [0/6000 (0%)]	Loss: 0.479693
+2021-05-16 00:18:04.302555	Train Epoch: 48 [2560/6000 (43%)]	Loss: 0.475085
+2021-05-16 00:18:04.402240	Train Epoch: 48 [5120/6000 (87%)]	Loss: 0.489990
+====> Epoch: 48 Average loss: 0.5076
+Train epoch = 49, alpha = 3.65755473609305, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:04.443262	Train Epoch: 49 [0/6000 (0%)]	Loss: 0.482146
+2021-05-16 00:18:04.549706	Train Epoch: 49 [2560/6000 (43%)]	Loss: 0.488306
+2021-05-16 00:18:04.650277	Train Epoch: 49 [5120/6000 (87%)]	Loss: 0.486499
+====> Epoch: 49 Average loss: 0.5030
+Starting lap 2 for evolution on synthetic_functions data in mode train...
+Running k-means...
+Running k-means...
+shape of s torch.Size([2, 4])
+Running k-segments...
+s1 shape:  torch.Size([18, 2])
+s2 shape:  torch.Size([18, 2])
+s_alphas shape:  torch.Size([18, 2])
+s1 shape:  torch.Size([18, 2])
+s2 shape:  torch.Size([18, 2])
+s_alphas shape:  torch.Size([18, 2])
+s1 shape:  torch.Size([2, 2])
+s2 shape:  torch.Size([2, 2])
+shape s_inter_rec_np =  (18, 2)
+i = 0, X_full shape = (6002, 2)
+i = 1, X_full shape = (6022, 2)
+i = 2, X_full shape = (6022, 2)
+i = 3, X_full shape = (6002, 2)
+i = 4, X_full shape = (6020, 2)
+i = 0, X_full shape = (6002, 2)
+i = 1, X_full shape = (6022, 2)
+i = 2, X_full shape = (6022, 2)
+i = 3, X_full shape = (6002, 2)
+i = 4, X_full shape = (6020, 2)
+['ACC = 0.717', 'NMI = 0.298', 'ARI = 0.189']
+Lap 2 for evolution DONE!
+Train epoch = 50, alpha = 3.65755473609305, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:08.781759	Train Epoch: 50 [0/6000 (0%)]	Loss: 0.477172
+2021-05-16 00:18:08.868470	Train Epoch: 50 [2560/6000 (43%)]	Loss: 0.482464
+2021-05-16 00:18:08.960915	Train Epoch: 50 [5120/6000 (87%)]	Loss: 0.468651
+====> Epoch: 50 Average loss: 0.4979
+Train epoch = 51, alpha = 3.65755473609305, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:09.002226	Train Epoch: 51 [0/6000 (0%)]	Loss: 0.475792
+2021-05-16 00:18:09.090209	Train Epoch: 51 [2560/6000 (43%)]	Loss: 0.474124
+2021-05-16 00:18:09.182155	Train Epoch: 51 [5120/6000 (87%)]	Loss: 0.475067
+====> Epoch: 51 Average loss: 0.4932
+Train epoch = 52, alpha = 3.65755473609305, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:09.217920	Train Epoch: 52 [0/6000 (0%)]	Loss: 0.466691
+2021-05-16 00:18:09.303885	Train Epoch: 52 [2560/6000 (43%)]	Loss: 0.468426
+2021-05-16 00:18:09.392953	Train Epoch: 52 [5120/6000 (87%)]	Loss: 0.472828
+====> Epoch: 52 Average loss: 0.4882
+Train epoch = 53, alpha = 3.65755473609305, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:09.430090	Train Epoch: 53 [0/6000 (0%)]	Loss: 0.472207
+2021-05-16 00:18:09.527766	Train Epoch: 53 [2560/6000 (43%)]	Loss: 0.458207
+2021-05-16 00:18:09.615697	Train Epoch: 53 [5120/6000 (87%)]	Loss: 0.442436
+====> Epoch: 53 Average loss: 0.4829
+Train epoch = 54, alpha = 4.092064942246333, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:09.654057	Train Epoch: 54 [0/6000 (0%)]	Loss: 0.456834
+2021-05-16 00:18:09.745248	Train Epoch: 54 [2560/6000 (43%)]	Loss: 0.458400
+2021-05-16 00:18:09.833495	Train Epoch: 54 [5120/6000 (87%)]	Loss: 0.451577
+====> Epoch: 54 Average loss: 0.4771
+Train epoch = 55, alpha = 4.092064942246333, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:09.868480	Train Epoch: 55 [0/6000 (0%)]	Loss: 0.461930
+2021-05-16 00:18:09.959228	Train Epoch: 55 [2560/6000 (43%)]	Loss: 0.445682
+2021-05-16 00:18:10.046267	Train Epoch: 55 [5120/6000 (87%)]	Loss: 0.448040
+====> Epoch: 55 Average loss: 0.4710
+Train epoch = 56, alpha = 4.092064942246333, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:10.101796	Train Epoch: 56 [0/6000 (0%)]	Loss: 0.460139
+2021-05-16 00:18:10.218728	Train Epoch: 56 [2560/6000 (43%)]	Loss: 0.447012
+2021-05-16 00:18:10.311259	Train Epoch: 56 [5120/6000 (87%)]	Loss: 0.438104
+====> Epoch: 56 Average loss: 0.4647
+Train epoch = 57, alpha = 4.092064942246333, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:10.346329	Train Epoch: 57 [0/6000 (0%)]	Loss: 0.445300
+2021-05-16 00:18:10.442699	Train Epoch: 57 [2560/6000 (43%)]	Loss: 0.428917
+2021-05-16 00:18:10.537844	Train Epoch: 57 [5120/6000 (87%)]	Loss: 0.446434
+====> Epoch: 57 Average loss: 0.4584
+Train epoch = 58, alpha = 4.092064942246333, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:10.574738	Train Epoch: 58 [0/6000 (0%)]	Loss: 0.421211
+2021-05-16 00:18:10.672403	Train Epoch: 58 [2560/6000 (43%)]	Loss: 0.437668
+2021-05-16 00:18:10.762137	Train Epoch: 58 [5120/6000 (87%)]	Loss: 0.427151
+====> Epoch: 58 Average loss: 0.4515
+Train epoch = 59, alpha = 4.546727776716206, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:10.796298	Train Epoch: 59 [0/6000 (0%)]	Loss: 0.445573
+2021-05-16 00:18:10.891099	Train Epoch: 59 [2560/6000 (43%)]	Loss: 0.425794
+2021-05-16 00:18:10.987372	Train Epoch: 59 [5120/6000 (87%)]	Loss: 0.416204
+====> Epoch: 59 Average loss: 0.4431
+Train epoch = 60, alpha = 4.546727776716206, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:11.029385	Train Epoch: 60 [0/6000 (0%)]	Loss: 0.425661
+2021-05-16 00:18:11.136271	Train Epoch: 60 [2560/6000 (43%)]	Loss: 0.412606
+2021-05-16 00:18:11.236873	Train Epoch: 60 [5120/6000 (87%)]	Loss: 0.419326
+====> Epoch: 60 Average loss: 0.4349
+Train epoch = 61, alpha = 4.546727776716206, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:11.278454	Train Epoch: 61 [0/6000 (0%)]	Loss: 0.411256
+2021-05-16 00:18:11.384402	Train Epoch: 61 [2560/6000 (43%)]	Loss: 0.404400
+2021-05-16 00:18:11.490123	Train Epoch: 61 [5120/6000 (87%)]	Loss: 0.393029
+====> Epoch: 61 Average loss: 0.4259
+Train epoch = 62, alpha = 4.546727776716206, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:11.528900	Train Epoch: 62 [0/6000 (0%)]	Loss: 0.401556
+2021-05-16 00:18:11.633143	Train Epoch: 62 [2560/6000 (43%)]	Loss: 0.404753
+2021-05-16 00:18:11.736890	Train Epoch: 62 [5120/6000 (87%)]	Loss: 0.389210
+====> Epoch: 62 Average loss: 0.4154
+Train epoch = 63, alpha = 4.546727776716206, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:11.777431	Train Epoch: 63 [0/6000 (0%)]	Loss: 0.394771
+2021-05-16 00:18:11.893133	Train Epoch: 63 [2560/6000 (43%)]	Loss: 0.401537
+2021-05-16 00:18:12.060175	Train Epoch: 63 [5120/6000 (87%)]	Loss: 0.382877
+====> Epoch: 63 Average loss: 0.4052
+Train epoch = 64, alpha = 5.0225200099929665, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:12.110338	Train Epoch: 64 [0/6000 (0%)]	Loss: 0.382629
+2021-05-16 00:18:12.223360	Train Epoch: 64 [2560/6000 (43%)]	Loss: 0.387664
+2021-05-16 00:18:12.332139	Train Epoch: 64 [5120/6000 (87%)]	Loss: 0.371360
+====> Epoch: 64 Average loss: 0.3938
+Train epoch = 65, alpha = 5.0225200099929665, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:12.369843	Train Epoch: 65 [0/6000 (0%)]	Loss: 0.375735
+2021-05-16 00:18:12.498819	Train Epoch: 65 [2560/6000 (43%)]	Loss: 0.365509
+2021-05-16 00:18:12.610570	Train Epoch: 65 [5120/6000 (87%)]	Loss: 0.352651
+====> Epoch: 65 Average loss: 0.3813
+Train epoch = 66, alpha = 5.0225200099929665, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:12.651933	Train Epoch: 66 [0/6000 (0%)]	Loss: 0.361070
+2021-05-16 00:18:12.757545	Train Epoch: 66 [2560/6000 (43%)]	Loss: 0.352426
+2021-05-16 00:18:12.856827	Train Epoch: 66 [5120/6000 (87%)]	Loss: 0.354926
+====> Epoch: 66 Average loss: 0.3683
+Train epoch = 67, alpha = 5.0225200099929665, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:12.903621	Train Epoch: 67 [0/6000 (0%)]	Loss: 0.337145
+2021-05-16 00:18:13.013862	Train Epoch: 67 [2560/6000 (43%)]	Loss: 0.341550
+2021-05-16 00:18:13.114771	Train Epoch: 67 [5120/6000 (87%)]	Loss: 0.326921
+====> Epoch: 67 Average loss: 0.3545
+Train epoch = 68, alpha = 5.0225200099929665, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:13.157814	Train Epoch: 68 [0/6000 (0%)]	Loss: 0.324642
+2021-05-16 00:18:13.258316	Train Epoch: 68 [2560/6000 (43%)]	Loss: 0.321848
+2021-05-16 00:18:13.354145	Train Epoch: 68 [5120/6000 (87%)]	Loss: 0.327283
+====> Epoch: 68 Average loss: 0.3394
+Train epoch = 69, alpha = 5.520394146673345, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:13.397083	Train Epoch: 69 [0/6000 (0%)]	Loss: 0.309466
+2021-05-16 00:18:13.501425	Train Epoch: 69 [2560/6000 (43%)]	Loss: 0.305829
+2021-05-16 00:18:13.597718	Train Epoch: 69 [5120/6000 (87%)]	Loss: 0.317964
+====> Epoch: 69 Average loss: 0.3231
+Train epoch = 70, alpha = 5.520394146673345, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:13.646482	Train Epoch: 70 [0/6000 (0%)]	Loss: 0.286898
+2021-05-16 00:18:13.745779	Train Epoch: 70 [2560/6000 (43%)]	Loss: 0.289864
+2021-05-16 00:18:13.830522	Train Epoch: 70 [5120/6000 (87%)]	Loss: 0.285659
+====> Epoch: 70 Average loss: 0.3060
+Train epoch = 71, alpha = 5.520394146673345, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:13.867132	Train Epoch: 71 [0/6000 (0%)]	Loss: 0.285537
+2021-05-16 00:18:13.954736	Train Epoch: 71 [2560/6000 (43%)]	Loss: 0.288497
+2021-05-16 00:18:14.042969	Train Epoch: 71 [5120/6000 (87%)]	Loss: 0.262057
+====> Epoch: 71 Average loss: 0.2879
+Train epoch = 72, alpha = 5.520394146673345, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:14.083349	Train Epoch: 72 [0/6000 (0%)]	Loss: 0.267131
+2021-05-16 00:18:14.205085	Train Epoch: 72 [2560/6000 (43%)]	Loss: 0.265344
+2021-05-16 00:18:14.310467	Train Epoch: 72 [5120/6000 (87%)]	Loss: 0.262344
+====> Epoch: 72 Average loss: 0.2689
+Train epoch = 73, alpha = 5.520394146673345, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:14.347605	Train Epoch: 73 [0/6000 (0%)]	Loss: 0.246578
+2021-05-16 00:18:14.449618	Train Epoch: 73 [2560/6000 (43%)]	Loss: 0.239941
+2021-05-16 00:18:14.542956	Train Epoch: 73 [5120/6000 (87%)]	Loss: 0.238504
+====> Epoch: 73 Average loss: 0.2495
+Train epoch = 74, alpha = 6.041290820871168, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:14.578287	Train Epoch: 74 [0/6000 (0%)]	Loss: 0.228911
+2021-05-16 00:18:14.677537	Train Epoch: 74 [2560/6000 (43%)]	Loss: 0.219174
+2021-05-16 00:18:14.769475	Train Epoch: 74 [5120/6000 (87%)]	Loss: 0.208531
+====> Epoch: 74 Average loss: 0.2299
+Train epoch = 75, alpha = 6.041290820871168, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:14.803845	Train Epoch: 75 [0/6000 (0%)]	Loss: 0.204915
+2021-05-16 00:18:14.893545	Train Epoch: 75 [2560/6000 (43%)]	Loss: 0.207002
+2021-05-16 00:18:14.981539	Train Epoch: 75 [5120/6000 (87%)]	Loss: 0.192672
+====> Epoch: 75 Average loss: 0.2092
+Train epoch = 76, alpha = 6.041290820871168, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:15.019084	Train Epoch: 76 [0/6000 (0%)]	Loss: 0.185734
+2021-05-16 00:18:15.118875	Train Epoch: 76 [2560/6000 (43%)]	Loss: 0.184017
+2021-05-16 00:18:15.211575	Train Epoch: 76 [5120/6000 (87%)]	Loss: 0.178580
+====> Epoch: 76 Average loss: 0.1888
+Train epoch = 77, alpha = 6.041290820871168, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:15.250790	Train Epoch: 77 [0/6000 (0%)]	Loss: 0.166061
+2021-05-16 00:18:15.356863	Train Epoch: 77 [2560/6000 (43%)]	Loss: 0.169948
+2021-05-16 00:18:15.462679	Train Epoch: 77 [5120/6000 (87%)]	Loss: 0.149717
+====> Epoch: 77 Average loss: 0.1686
+Train epoch = 78, alpha = 6.041290820871168, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:15.499142	Train Epoch: 78 [0/6000 (0%)]	Loss: 0.154131
+2021-05-16 00:18:15.589129	Train Epoch: 78 [2560/6000 (43%)]	Loss: 0.149428
+2021-05-16 00:18:15.677996	Train Epoch: 78 [5120/6000 (87%)]	Loss: 0.133740
+====> Epoch: 78 Average loss: 0.1490
+Train epoch = 79, alpha = 6.586147687908683, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:15.714340	Train Epoch: 79 [0/6000 (0%)]	Loss: 0.136262
+2021-05-16 00:18:15.806321	Train Epoch: 79 [2560/6000 (43%)]	Loss: 0.127462
+2021-05-16 00:18:15.895332	Train Epoch: 79 [5120/6000 (87%)]	Loss: 0.117416
+====> Epoch: 79 Average loss: 0.1300
+Train epoch = 80, alpha = 6.586147687908683, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:15.932238	Train Epoch: 80 [0/6000 (0%)]	Loss: 0.115472
+2021-05-16 00:18:16.018654	Train Epoch: 80 [2560/6000 (43%)]	Loss: 0.105995
+2021-05-16 00:18:16.106763	Train Epoch: 80 [5120/6000 (87%)]	Loss: 0.098722
+====> Epoch: 80 Average loss: 0.1118
+Train epoch = 81, alpha = 6.586147687908683, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:16.145595	Train Epoch: 81 [0/6000 (0%)]	Loss: 0.098154
+2021-05-16 00:18:16.234471	Train Epoch: 81 [2560/6000 (43%)]	Loss: 0.090032
+2021-05-16 00:18:16.321945	Train Epoch: 81 [5120/6000 (87%)]	Loss: 0.085336
+====> Epoch: 81 Average loss: 0.0950
+Train epoch = 82, alpha = 6.586147687908683, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:16.356108	Train Epoch: 82 [0/6000 (0%)]	Loss: 0.085943
+2021-05-16 00:18:16.455658	Train Epoch: 82 [2560/6000 (43%)]	Loss: 0.075507
+2021-05-16 00:18:16.548742	Train Epoch: 82 [5120/6000 (87%)]	Loss: 0.071048
+====> Epoch: 82 Average loss: 0.0796
+Train epoch = 83, alpha = 6.586147687908683, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:16.589228	Train Epoch: 83 [0/6000 (0%)]	Loss: 0.069549
+2021-05-16 00:18:16.700978	Train Epoch: 83 [2560/6000 (43%)]	Loss: 0.062708
+2021-05-16 00:18:16.800619	Train Epoch: 83 [5120/6000 (87%)]	Loss: 0.058403
+====> Epoch: 83 Average loss: 0.0660
+Train epoch = 84, alpha = 7.155905984855657, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:16.832420	Train Epoch: 84 [0/6000 (0%)]	Loss: 0.058910
+2021-05-16 00:18:16.922086	Train Epoch: 84 [2560/6000 (43%)]	Loss: 0.049969
+2021-05-16 00:18:17.009285	Train Epoch: 84 [5120/6000 (87%)]	Loss: 0.046680
+====> Epoch: 84 Average loss: 0.0537
+Train epoch = 85, alpha = 7.155905984855657, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:17.047310	Train Epoch: 85 [0/6000 (0%)]	Loss: 0.045463
+2021-05-16 00:18:17.138367	Train Epoch: 85 [2560/6000 (43%)]	Loss: 0.040057
+2021-05-16 00:18:17.231570	Train Epoch: 85 [5120/6000 (87%)]	Loss: 0.037889
+====> Epoch: 85 Average loss: 0.0432
+Train epoch = 86, alpha = 7.155905984855657, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:17.269209	Train Epoch: 86 [0/6000 (0%)]	Loss: 0.036139
+2021-05-16 00:18:17.357945	Train Epoch: 86 [2560/6000 (43%)]	Loss: 0.033306
+2021-05-16 00:18:17.447322	Train Epoch: 86 [5120/6000 (87%)]	Loss: 0.029453
+====> Epoch: 86 Average loss: 0.0341
+Train epoch = 87, alpha = 7.155905984855657, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:17.482965	Train Epoch: 87 [0/6000 (0%)]	Loss: 0.028843
+2021-05-16 00:18:17.571224	Train Epoch: 87 [2560/6000 (43%)]	Loss: 0.026031
+2021-05-16 00:18:17.658717	Train Epoch: 87 [5120/6000 (87%)]	Loss: 0.024212
+====> Epoch: 87 Average loss: 0.0267
+Train epoch = 88, alpha = 7.155905984855657, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:17.696172	Train Epoch: 88 [0/6000 (0%)]	Loss: 0.021927
+2021-05-16 00:18:17.789763	Train Epoch: 88 [2560/6000 (43%)]	Loss: 0.020668
+2021-05-16 00:18:17.874458	Train Epoch: 88 [5120/6000 (87%)]	Loss: 0.017010
+====> Epoch: 88 Average loss: 0.0205
+Train epoch = 89, alpha = 7.751515502863206, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:17.914535	Train Epoch: 89 [0/6000 (0%)]	Loss: 0.016975
+2021-05-16 00:18:18.005640	Train Epoch: 89 [2560/6000 (43%)]	Loss: 0.015278
+2021-05-16 00:18:18.091803	Train Epoch: 89 [5120/6000 (87%)]	Loss: 0.014002
+====> Epoch: 89 Average loss: 0.0156
+Train epoch = 90, alpha = 7.751515502863206, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:18.130704	Train Epoch: 90 [0/6000 (0%)]	Loss: 0.012847
+2021-05-16 00:18:18.240220	Train Epoch: 90 [2560/6000 (43%)]	Loss: 0.011561
+2021-05-16 00:18:18.333565	Train Epoch: 90 [5120/6000 (87%)]	Loss: 0.009863
+====> Epoch: 90 Average loss: 0.0117
+Train epoch = 91, alpha = 7.751515502863206, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:18.369854	Train Epoch: 91 [0/6000 (0%)]	Loss: 0.009600
+2021-05-16 00:18:18.460754	Train Epoch: 91 [2560/6000 (43%)]	Loss: 0.008616
+2021-05-16 00:18:18.554299	Train Epoch: 91 [5120/6000 (87%)]	Loss: 0.007558
+====> Epoch: 91 Average loss: 0.0087
+Train epoch = 92, alpha = 7.751515502863206, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:18.596159	Train Epoch: 92 [0/6000 (0%)]	Loss: 0.006709
+2021-05-16 00:18:18.707419	Train Epoch: 92 [2560/6000 (43%)]	Loss: 0.006421
+2021-05-16 00:18:18.805665	Train Epoch: 92 [5120/6000 (87%)]	Loss: 0.005622
+====> Epoch: 92 Average loss: 0.0064
+Train epoch = 93, alpha = 7.751515502863206, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:18.845001	Train Epoch: 93 [0/6000 (0%)]	Loss: 0.005013
+2021-05-16 00:18:18.947787	Train Epoch: 93 [2560/6000 (43%)]	Loss: 0.004501
+2021-05-16 00:18:19.046530	Train Epoch: 93 [5120/6000 (87%)]	Loss: 0.003860
+====> Epoch: 93 Average loss: 0.0046
+Train epoch = 94, alpha = 8.373938454865366, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:19.089704	Train Epoch: 94 [0/6000 (0%)]	Loss: 0.003604
+2021-05-16 00:18:19.197297	Train Epoch: 94 [2560/6000 (43%)]	Loss: 0.003261
+2021-05-16 00:18:19.303569	Train Epoch: 94 [5120/6000 (87%)]	Loss: 0.002739
+====> Epoch: 94 Average loss: 0.0033
+Train epoch = 95, alpha = 8.373938454865366, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:19.347401	Train Epoch: 95 [0/6000 (0%)]	Loss: 0.002498
+2021-05-16 00:18:19.459159	Train Epoch: 95 [2560/6000 (43%)]	Loss: 0.002317
+2021-05-16 00:18:19.566898	Train Epoch: 95 [5120/6000 (87%)]	Loss: 0.001972
+====> Epoch: 95 Average loss: 0.0023
+Train epoch = 96, alpha = 8.373938454865366, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:19.608878	Train Epoch: 96 [0/6000 (0%)]	Loss: 0.001867
+2021-05-16 00:18:19.717285	Train Epoch: 96 [2560/6000 (43%)]	Loss: 0.001649
+2021-05-16 00:18:19.830010	Train Epoch: 96 [5120/6000 (87%)]	Loss: 0.001379
+====> Epoch: 96 Average loss: 0.0016
+Train epoch = 97, alpha = 8.373938454865366, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:19.869606	Train Epoch: 97 [0/6000 (0%)]	Loss: 0.001275
+2021-05-16 00:18:19.978792	Train Epoch: 97 [2560/6000 (43%)]	Loss: 0.001118
+2021-05-16 00:18:20.077248	Train Epoch: 97 [5120/6000 (87%)]	Loss: 0.000933
+====> Epoch: 97 Average loss: 0.0011
+Train epoch = 98, alpha = 8.373938454865366, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:20.124497	Train Epoch: 98 [0/6000 (0%)]	Loss: 0.000883
+2021-05-16 00:18:20.235443	Train Epoch: 98 [2560/6000 (43%)]	Loss: 0.000743
+2021-05-16 00:18:20.340256	Train Epoch: 98 [5120/6000 (87%)]	Loss: 0.000643
+====> Epoch: 98 Average loss: 0.0008
+Train epoch = 99, alpha = 9.024152561056017, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:20.377435	Train Epoch: 99 [0/6000 (0%)]	Loss: 0.000599
+2021-05-16 00:18:20.494747	Train Epoch: 99 [2560/6000 (43%)]	Loss: 0.000521
+2021-05-16 00:18:20.593984	Train Epoch: 99 [5120/6000 (87%)]	Loss: 0.000446
+====> Epoch: 99 Average loss: 0.0005
+Starting lap 3 for evolution on synthetic_functions data in mode train...
+Running k-means...
+Running k-means...
+shape of s torch.Size([2, 4])
+Running k-segments...
+s1 shape:  torch.Size([18, 2])
+s2 shape:  torch.Size([18, 2])
+s_alphas shape:  torch.Size([18, 2])
+s1 shape:  torch.Size([18, 2])
+s2 shape:  torch.Size([18, 2])
+s_alphas shape:  torch.Size([18, 2])
+s1 shape:  torch.Size([2, 2])
+s2 shape:  torch.Size([2, 2])
+shape s_inter_rec_np =  (18, 2)
+i = 0, X_full shape = (6002, 2)
+i = 1, X_full shape = (6022, 2)
+i = 2, X_full shape = (6022, 2)
+i = 3, X_full shape = (6002, 2)
+i = 4, X_full shape = (6020, 2)
+i = 0, X_full shape = (6002, 2)
+i = 1, X_full shape = (6022, 2)
+i = 2, X_full shape = (6022, 2)
+i = 3, X_full shape = (6002, 2)
+i = 4, X_full shape = (6020, 2)
+['ACC = 0.969', 'NMI = 0.83', 'ARI = 0.879']
+Lap 3 for evolution DONE!
+Train epoch = 100, alpha = 9.024152561056017, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:24.911300	Train Epoch: 100 [0/6000 (0%)]	Loss: 0.000419
+2021-05-16 00:18:25.001612	Train Epoch: 100 [2560/6000 (43%)]	Loss: 0.000359
+2021-05-16 00:18:25.086398	Train Epoch: 100 [5120/6000 (87%)]	Loss: 0.000290
+====> Epoch: 100 Average loss: 0.0004
+Train epoch = 101, alpha = 9.024152561056017, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:25.121458	Train Epoch: 101 [0/6000 (0%)]	Loss: 0.000267
+2021-05-16 00:18:25.213451	Train Epoch: 101 [2560/6000 (43%)]	Loss: 0.000237
+2021-05-16 00:18:25.299545	Train Epoch: 101 [5120/6000 (87%)]	Loss: 0.000197
+====> Epoch: 101 Average loss: 0.0002
+Train epoch = 102, alpha = 9.024152561056017, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:25.336746	Train Epoch: 102 [0/6000 (0%)]	Loss: 0.000185
+2021-05-16 00:18:25.438073	Train Epoch: 102 [2560/6000 (43%)]	Loss: 0.000157
+2021-05-16 00:18:25.524396	Train Epoch: 102 [5120/6000 (87%)]	Loss: 0.000130
+====> Epoch: 102 Average loss: 0.0002
+Train epoch = 103, alpha = 9.024152561056017, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:25.561503	Train Epoch: 103 [0/6000 (0%)]	Loss: 0.000123
+2021-05-16 00:18:25.648391	Train Epoch: 103 [2560/6000 (43%)]	Loss: 0.000103
+2021-05-16 00:18:25.735007	Train Epoch: 103 [5120/6000 (87%)]	Loss: 0.000086
+====> Epoch: 103 Average loss: 0.0001
+Train epoch = 104, alpha = 9.70315357178555, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:25.770459	Train Epoch: 104 [0/6000 (0%)]	Loss: 0.000081
+2021-05-16 00:18:25.865336	Train Epoch: 104 [2560/6000 (43%)]	Loss: 0.000067
+2021-05-16 00:18:25.956774	Train Epoch: 104 [5120/6000 (87%)]	Loss: 0.000056
+====> Epoch: 104 Average loss: 0.0001
+Train epoch = 105, alpha = 9.70315357178555, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:25.989586	Train Epoch: 105 [0/6000 (0%)]	Loss: 0.000052
+2021-05-16 00:18:26.079850	Train Epoch: 105 [2560/6000 (43%)]	Loss: 0.000044
+2021-05-16 00:18:26.168373	Train Epoch: 105 [5120/6000 (87%)]	Loss: 0.000036
+====> Epoch: 105 Average loss: 0.0000
+Train epoch = 106, alpha = 9.70315357178555, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:26.201174	Train Epoch: 106 [0/6000 (0%)]	Loss: 0.000034
+2021-05-16 00:18:26.290645	Train Epoch: 106 [2560/6000 (43%)]	Loss: 0.000027
+2021-05-16 00:18:26.374531	Train Epoch: 106 [5120/6000 (87%)]	Loss: 0.000024
+====> Epoch: 106 Average loss: 0.0000
+Train epoch = 107, alpha = 9.70315357178555, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:26.422442	Train Epoch: 107 [0/6000 (0%)]	Loss: 0.000022
+2021-05-16 00:18:26.518068	Train Epoch: 107 [2560/6000 (43%)]	Loss: 0.000019
+2021-05-16 00:18:26.608048	Train Epoch: 107 [5120/6000 (87%)]	Loss: 0.000015
+====> Epoch: 107 Average loss: 0.0000
+Train epoch = 108, alpha = 9.70315357178555, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:26.647105	Train Epoch: 108 [0/6000 (0%)]	Loss: 0.000014
+2021-05-16 00:18:26.738121	Train Epoch: 108 [2560/6000 (43%)]	Loss: 0.000012
+2021-05-16 00:18:26.840893	Train Epoch: 108 [5120/6000 (87%)]	Loss: 0.000010
+====> Epoch: 108 Average loss: 0.0000
+Train epoch = 109, alpha = 10.41195738045587, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:26.880140	Train Epoch: 109 [0/6000 (0%)]	Loss: 0.000009
+2021-05-16 00:18:26.971030	Train Epoch: 109 [2560/6000 (43%)]	Loss: 0.000007
+2021-05-16 00:18:27.064217	Train Epoch: 109 [5120/6000 (87%)]	Loss: 0.000006
+====> Epoch: 109 Average loss: 0.0000
+Train epoch = 110, alpha = 10.41195738045587, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:27.099715	Train Epoch: 110 [0/6000 (0%)]	Loss: 0.000006
+2021-05-16 00:18:27.190500	Train Epoch: 110 [2560/6000 (43%)]	Loss: 0.000005
+2021-05-16 00:18:27.277293	Train Epoch: 110 [5120/6000 (87%)]	Loss: 0.000004
+====> Epoch: 110 Average loss: 0.0000
+Train epoch = 111, alpha = 10.41195738045587, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:27.315045	Train Epoch: 111 [0/6000 (0%)]	Loss: 0.000004
+2021-05-16 00:18:27.411388	Train Epoch: 111 [2560/6000 (43%)]	Loss: 0.000003
+2021-05-16 00:18:27.498180	Train Epoch: 111 [5120/6000 (87%)]	Loss: 0.000002
+====> Epoch: 111 Average loss: 0.0000
+Train epoch = 112, alpha = 10.41195738045587, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:27.536205	Train Epoch: 112 [0/6000 (0%)]	Loss: 0.000002
+2021-05-16 00:18:27.628266	Train Epoch: 112 [2560/6000 (43%)]	Loss: 0.000002
+2021-05-16 00:18:27.719139	Train Epoch: 112 [5120/6000 (87%)]	Loss: 0.000001
+====> Epoch: 112 Average loss: 0.0000
+Train epoch = 113, alpha = 10.41195738045587, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:27.757202	Train Epoch: 113 [0/6000 (0%)]	Loss: 0.000001
+2021-05-16 00:18:27.852597	Train Epoch: 113 [2560/6000 (43%)]	Loss: 0.000001
+2021-05-16 00:18:27.940108	Train Epoch: 113 [5120/6000 (87%)]	Loss: 0.000001
+====> Epoch: 113 Average loss: 0.0000
+Train epoch = 114, alpha = 11.151601834294587, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:27.986323	Train Epoch: 114 [0/6000 (0%)]	Loss: 0.000001
+2021-05-16 00:18:28.101310	Train Epoch: 114 [2560/6000 (43%)]	Loss: 0.000001
+2021-05-16 00:18:28.217729	Train Epoch: 114 [5120/6000 (87%)]	Loss: 0.000001
+====> Epoch: 114 Average loss: 0.0000
+Train epoch = 115, alpha = 11.151601834294587, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:28.256675	Train Epoch: 115 [0/6000 (0%)]	Loss: 0.000001
+2021-05-16 00:18:28.350365	Train Epoch: 115 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:28.443728	Train Epoch: 115 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 115 Average loss: 0.0000
+Train epoch = 116, alpha = 11.151601834294587, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:28.481077	Train Epoch: 116 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:28.573897	Train Epoch: 116 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:28.682445	Train Epoch: 116 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 116 Average loss: 0.0000
+Train epoch = 117, alpha = 11.151601834294587, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:28.724794	Train Epoch: 117 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:28.834688	Train Epoch: 117 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:28.934024	Train Epoch: 117 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 117 Average loss: 0.0000
+Train epoch = 118, alpha = 11.151601834294587, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:28.984444	Train Epoch: 118 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:29.087897	Train Epoch: 118 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:29.264464	Train Epoch: 118 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 118 Average loss: 0.0000
+Train epoch = 119, alpha = 11.923148320526698, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:29.301608	Train Epoch: 119 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:29.413665	Train Epoch: 119 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:29.516769	Train Epoch: 119 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 119 Average loss: 0.0000
+Train epoch = 120, alpha = 11.923148320526698, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:29.554926	Train Epoch: 120 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:29.662004	Train Epoch: 120 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:29.766450	Train Epoch: 120 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 120 Average loss: 0.0000
+Train epoch = 121, alpha = 11.923148320526698, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:29.819002	Train Epoch: 121 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:29.927661	Train Epoch: 121 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:30.028308	Train Epoch: 121 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 121 Average loss: 0.0000
+Train epoch = 122, alpha = 11.923148320526698, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:30.070834	Train Epoch: 122 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:30.172775	Train Epoch: 122 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:30.272195	Train Epoch: 122 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 122 Average loss: 0.0000
+Train epoch = 123, alpha = 11.923148320526698, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:30.310713	Train Epoch: 123 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:30.425921	Train Epoch: 123 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:30.524577	Train Epoch: 123 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 123 Average loss: 0.0000
+Train epoch = 124, alpha = 12.727683184476852, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:30.560819	Train Epoch: 124 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:30.668381	Train Epoch: 124 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:30.769083	Train Epoch: 124 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 124 Average loss: 0.0000
+Train epoch = 125, alpha = 12.727683184476852, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:30.814786	Train Epoch: 125 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:30.914672	Train Epoch: 125 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:31.017558	Train Epoch: 125 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 125 Average loss: 0.0000
+Train epoch = 126, alpha = 12.727683184476852, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:31.061356	Train Epoch: 126 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:31.161890	Train Epoch: 126 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:31.262781	Train Epoch: 126 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 126 Average loss: 0.0000
+Train epoch = 127, alpha = 12.727683184476852, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:31.302110	Train Epoch: 127 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:31.420424	Train Epoch: 127 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:31.521396	Train Epoch: 127 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 127 Average loss: 0.0000
+Train epoch = 128, alpha = 12.727683184476852, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:31.565222	Train Epoch: 128 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:31.685282	Train Epoch: 128 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:31.788228	Train Epoch: 128 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 128 Average loss: 0.0000
+Train epoch = 129, alpha = 13.56631902140002, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:31.828723	Train Epoch: 129 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:31.934290	Train Epoch: 129 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:32.034682	Train Epoch: 129 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 129 Average loss: 0.0000
+Train epoch = 130, alpha = 13.56631902140002, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:32.072323	Train Epoch: 130 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:32.183020	Train Epoch: 130 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:32.284554	Train Epoch: 130 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 130 Average loss: 0.0000
+Train epoch = 131, alpha = 13.56631902140002, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:32.329887	Train Epoch: 131 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:32.446273	Train Epoch: 131 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:32.536850	Train Epoch: 131 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 131 Average loss: 0.0000
+Train epoch = 132, alpha = 13.56631902140002, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:32.572963	Train Epoch: 132 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:32.673627	Train Epoch: 132 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:32.763090	Train Epoch: 132 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 132 Average loss: 0.0000
+Train epoch = 133, alpha = 13.56631902140002, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:32.799479	Train Epoch: 133 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:32.893614	Train Epoch: 133 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:32.989410	Train Epoch: 133 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 133 Average loss: 0.0000
+Train epoch = 134, alpha = 14.440195873340702, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:33.043802	Train Epoch: 134 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:33.168528	Train Epoch: 134 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:33.259272	Train Epoch: 134 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 134 Average loss: 0.0000
+Train epoch = 135, alpha = 14.440195873340702, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:33.297266	Train Epoch: 135 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:33.389695	Train Epoch: 135 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:33.483410	Train Epoch: 135 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 135 Average loss: 0.0000
+Train epoch = 136, alpha = 14.440195873340702, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:33.517076	Train Epoch: 136 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:33.613871	Train Epoch: 136 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:33.710632	Train Epoch: 136 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 136 Average loss: 0.0000
+Train epoch = 137, alpha = 14.440195873340702, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:33.753177	Train Epoch: 137 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:33.862302	Train Epoch: 137 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:33.965356	Train Epoch: 137 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 137 Average loss: 0.0000
+Train epoch = 138, alpha = 14.440195873340702, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:34.010606	Train Epoch: 138 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:34.111007	Train Epoch: 138 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:34.214723	Train Epoch: 138 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 138 Average loss: 0.0000
+Train epoch = 139, alpha = 15.350482354741938, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:34.264520	Train Epoch: 139 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:34.364640	Train Epoch: 139 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:34.453918	Train Epoch: 139 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 139 Average loss: 0.0000
+Train epoch = 140, alpha = 15.350482354741938, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:34.488540	Train Epoch: 140 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:34.578420	Train Epoch: 140 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:34.668018	Train Epoch: 140 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 140 Average loss: 0.0000
+Train epoch = 141, alpha = 15.350482354741938, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:34.704494	Train Epoch: 141 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:34.798149	Train Epoch: 141 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:34.887521	Train Epoch: 141 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 141 Average loss: 0.0000
+Train epoch = 142, alpha = 15.350482354741938, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:34.930754	Train Epoch: 142 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:35.026521	Train Epoch: 142 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:35.116912	Train Epoch: 142 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 142 Average loss: 0.0000
+Train epoch = 143, alpha = 15.350482354741938, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:35.155707	Train Epoch: 143 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:35.258916	Train Epoch: 143 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:35.358903	Train Epoch: 143 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 143 Average loss: 0.0000
+Train epoch = 144, alpha = 16.29837672498614, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:35.403045	Train Epoch: 144 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:35.519431	Train Epoch: 144 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:35.628721	Train Epoch: 144 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 144 Average loss: 0.0000
+Train epoch = 145, alpha = 16.29837672498614, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:35.666814	Train Epoch: 145 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:35.772344	Train Epoch: 145 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:35.877655	Train Epoch: 145 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 145 Average loss: 0.0000
+Train epoch = 146, alpha = 16.29837672498614, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:35.918059	Train Epoch: 146 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:36.019462	Train Epoch: 146 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:36.119427	Train Epoch: 146 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 146 Average loss: 0.0000
+Train epoch = 147, alpha = 16.29837672498614, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:36.169801	Train Epoch: 147 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:36.274232	Train Epoch: 147 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:36.370124	Train Epoch: 147 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 147 Average loss: 0.0000
+Train epoch = 148, alpha = 16.29837672498614, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:36.417980	Train Epoch: 148 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:36.525248	Train Epoch: 148 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:36.619578	Train Epoch: 148 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 148 Average loss: 0.0000
+Train epoch = 149, alpha = 17.28510792195538, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:36.653473	Train Epoch: 149 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:36.741671	Train Epoch: 149 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:36.830944	Train Epoch: 149 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 149 Average loss: 0.0000
+Starting lap 4 for evolution on synthetic_functions data in mode train...
+Running k-means...
+Running k-means...
+shape of s torch.Size([2, 4])
+Running k-segments...
+s1 shape:  torch.Size([18, 2])
+s2 shape:  torch.Size([18, 2])
+s_alphas shape:  torch.Size([18, 2])
+s1 shape:  torch.Size([18, 2])
+s2 shape:  torch.Size([18, 2])
+s_alphas shape:  torch.Size([18, 2])
+s1 shape:  torch.Size([2, 2])
+s2 shape:  torch.Size([2, 2])
+shape s_inter_rec_np =  (18, 2)
+i = 0, X_full shape = (6002, 2)
+i = 1, X_full shape = (6022, 2)
+i = 2, X_full shape = (6022, 2)
+i = 3, X_full shape = (6002, 2)
+i = 4, X_full shape = (6020, 2)
+i = 0, X_full shape = (6002, 2)
+i = 1, X_full shape = (6022, 2)
+i = 2, X_full shape = (6022, 2)
+i = 3, X_full shape = (6002, 2)
+i = 4, X_full shape = (6020, 2)
+['ACC = 1.0', 'NMI = 0.998', 'ARI = 0.999']
+Lap 4 for evolution DONE!
+Train epoch = 150, alpha = 17.28510792195538, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:41.021338	Train Epoch: 150 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:41.116173	Train Epoch: 150 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:41.203499	Train Epoch: 150 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 150 Average loss: 0.0000
+Train epoch = 151, alpha = 17.28510792195538, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:41.244058	Train Epoch: 151 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:41.332316	Train Epoch: 151 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:41.421555	Train Epoch: 151 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 151 Average loss: 0.0000
+Train epoch = 152, alpha = 17.28510792195538, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:41.461087	Train Epoch: 152 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:41.573139	Train Epoch: 152 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:41.660032	Train Epoch: 152 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 152 Average loss: 0.0000
+Train epoch = 153, alpha = 17.28510792195538, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:41.694650	Train Epoch: 153 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:41.783874	Train Epoch: 153 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:41.875788	Train Epoch: 153 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 153 Average loss: 0.0000
+Train epoch = 154, alpha = 18.311936567640323, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:41.911732	Train Epoch: 154 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:42.013396	Train Epoch: 154 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:42.114152	Train Epoch: 154 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 154 Average loss: 0.0000
+Train epoch = 155, alpha = 18.311936567640323, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:42.151609	Train Epoch: 155 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:42.257171	Train Epoch: 155 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:42.350425	Train Epoch: 155 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 155 Average loss: 0.0000
+Train epoch = 156, alpha = 18.311936567640323, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:42.391061	Train Epoch: 156 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:42.508712	Train Epoch: 156 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:42.605018	Train Epoch: 156 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 156 Average loss: 0.0000
+Train epoch = 157, alpha = 18.311936567640323, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:42.647024	Train Epoch: 157 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:42.753174	Train Epoch: 157 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:42.854162	Train Epoch: 157 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 157 Average loss: 0.0000
+Train epoch = 158, alpha = 18.311936567640323, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:42.896488	Train Epoch: 158 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:43.050965	Train Epoch: 158 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:43.148576	Train Epoch: 158 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 158 Average loss: 0.0000
+Train epoch = 159, alpha = 19.380155954520465, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:43.195378	Train Epoch: 159 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:43.304965	Train Epoch: 159 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:43.413754	Train Epoch: 159 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 159 Average loss: 0.0000
+Train epoch = 160, alpha = 19.380155954520465, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:43.456926	Train Epoch: 160 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:43.565787	Train Epoch: 160 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:43.667946	Train Epoch: 160 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 160 Average loss: 0.0000
+Train epoch = 161, alpha = 19.380155954520465, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:43.704495	Train Epoch: 161 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:43.801408	Train Epoch: 161 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:43.889629	Train Epoch: 161 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 161 Average loss: 0.0000
+Train epoch = 162, alpha = 19.380155954520465, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:43.926751	Train Epoch: 162 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:44.013479	Train Epoch: 162 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:44.144976	Train Epoch: 162 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 162 Average loss: 0.0000
+Train epoch = 163, alpha = 19.380155954520465, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:44.199404	Train Epoch: 163 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:44.290256	Train Epoch: 163 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:44.381416	Train Epoch: 163 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 163 Average loss: 0.0000
+Train epoch = 164, alpha = 20.4910930196826, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:44.424073	Train Epoch: 164 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:44.525217	Train Epoch: 164 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:44.627259	Train Epoch: 164 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 164 Average loss: 0.0000
+Train epoch = 165, alpha = 20.4910930196826, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:44.670193	Train Epoch: 165 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:44.771669	Train Epoch: 165 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:44.868527	Train Epoch: 165 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 165 Average loss: 0.0000
+Train epoch = 166, alpha = 20.4910930196826, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:44.910583	Train Epoch: 166 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:45.007537	Train Epoch: 166 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:45.107067	Train Epoch: 166 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 166 Average loss: 0.0000
+Train epoch = 167, alpha = 20.4910930196826, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:45.145953	Train Epoch: 167 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:45.250437	Train Epoch: 167 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:45.352063	Train Epoch: 167 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 167 Average loss: 0.0000
+Train epoch = 168, alpha = 20.4910930196826, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:45.394544	Train Epoch: 168 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:45.494201	Train Epoch: 168 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:45.594279	Train Epoch: 168 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 168 Average loss: 0.0000
+Train epoch = 169, alpha = 21.64610931229765, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:45.635174	Train Epoch: 169 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:45.745679	Train Epoch: 169 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:45.837616	Train Epoch: 169 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 169 Average loss: 0.0000
+Train epoch = 170, alpha = 21.64610931229765, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:45.874149	Train Epoch: 170 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:45.967461	Train Epoch: 170 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:46.052342	Train Epoch: 170 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 170 Average loss: 0.0000
+Train epoch = 171, alpha = 21.64610931229765, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:46.092587	Train Epoch: 171 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:46.184379	Train Epoch: 171 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:46.270865	Train Epoch: 171 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 171 Average loss: 0.0000
+Train epoch = 172, alpha = 21.64610931229765, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:46.302868	Train Epoch: 172 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:46.393124	Train Epoch: 172 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:46.483361	Train Epoch: 172 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 172 Average loss: 0.0000
+Train epoch = 173, alpha = 21.64610931229765, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:46.519595	Train Epoch: 173 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:46.613773	Train Epoch: 173 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:46.702051	Train Epoch: 173 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 173 Average loss: 0.0000
+Train epoch = 174, alpha = 22.846601959033872, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:46.738704	Train Epoch: 174 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:46.842845	Train Epoch: 174 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:46.931177	Train Epoch: 174 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 174 Average loss: 0.0000
+Train epoch = 175, alpha = 22.846601959033872, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:46.965062	Train Epoch: 175 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:47.052354	Train Epoch: 175 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:47.139062	Train Epoch: 175 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 175 Average loss: 0.0000
+Train epoch = 176, alpha = 22.846601959033872, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:47.174103	Train Epoch: 176 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:47.263804	Train Epoch: 176 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:47.349743	Train Epoch: 176 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 176 Average loss: 0.0000
+Train epoch = 177, alpha = 22.846601959033872, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:47.389653	Train Epoch: 177 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:47.485458	Train Epoch: 177 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:47.571904	Train Epoch: 177 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 177 Average loss: 0.0000
+Train epoch = 178, alpha = 22.846601959033872, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:47.606863	Train Epoch: 178 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:47.704345	Train Epoch: 178 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:47.793422	Train Epoch: 178 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 178 Average loss: 0.0000
+Train epoch = 179, alpha = 24.094004631173387, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:47.828145	Train Epoch: 179 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:47.923842	Train Epoch: 179 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:48.008524	Train Epoch: 179 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 179 Average loss: 0.0000
+Train epoch = 180, alpha = 24.094004631173387, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:48.047725	Train Epoch: 180 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:48.141877	Train Epoch: 180 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:48.242096	Train Epoch: 180 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 180 Average loss: 0.0000
+Train epoch = 181, alpha = 24.094004631173387, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:48.285332	Train Epoch: 181 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:48.393240	Train Epoch: 181 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:48.499188	Train Epoch: 181 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 181 Average loss: 0.0000
+Train epoch = 182, alpha = 24.094004631173387, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:48.536020	Train Epoch: 182 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:48.641056	Train Epoch: 182 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:48.737484	Train Epoch: 182 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 182 Average loss: 0.0000
+Train epoch = 183, alpha = 24.094004631173387, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:48.774627	Train Epoch: 183 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:48.868897	Train Epoch: 183 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:48.955976	Train Epoch: 183 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 183 Average loss: 0.0000
+Train epoch = 184, alpha = 25.38978851656256, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:48.989706	Train Epoch: 184 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:49.078842	Train Epoch: 184 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:49.167607	Train Epoch: 184 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 184 Average loss: 0.0000
+Train epoch = 185, alpha = 25.38978851656256, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:49.203158	Train Epoch: 185 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:49.298339	Train Epoch: 185 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:49.385717	Train Epoch: 185 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 185 Average loss: 0.0000
+Train epoch = 186, alpha = 25.38978851656256, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:49.424118	Train Epoch: 186 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:49.516370	Train Epoch: 186 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:49.699576	Train Epoch: 186 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 186 Average loss: 0.0000
+Train epoch = 187, alpha = 25.38978851656256, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:49.825566	Train Epoch: 187 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:50.051651	Train Epoch: 187 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:50.152166	Train Epoch: 187 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 187 Average loss: 0.0000
+Train epoch = 188, alpha = 25.38978851656256, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:50.193476	Train Epoch: 188 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:50.287657	Train Epoch: 188 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:50.379602	Train Epoch: 188 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 188 Average loss: 0.0000
+Train epoch = 189, alpha = 26.735463299025135, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:50.421444	Train Epoch: 189 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:50.511760	Train Epoch: 189 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:50.600607	Train Epoch: 189 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 189 Average loss: 0.0000
+Train epoch = 190, alpha = 26.735463299025135, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:50.646519	Train Epoch: 190 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:50.741810	Train Epoch: 190 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:50.828495	Train Epoch: 190 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 190 Average loss: 0.0000
+Train epoch = 191, alpha = 26.735463299025135, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:50.865317	Train Epoch: 191 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:50.964043	Train Epoch: 191 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:51.056415	Train Epoch: 191 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 191 Average loss: 0.0000
+Train epoch = 192, alpha = 26.735463299025135, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:51.092326	Train Epoch: 192 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:51.182026	Train Epoch: 192 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:51.273950	Train Epoch: 192 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 192 Average loss: 0.0000
+Train epoch = 193, alpha = 26.735463299025135, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:51.309546	Train Epoch: 193 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:51.403343	Train Epoch: 193 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:51.502432	Train Epoch: 193 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 193 Average loss: 0.0000
+Train epoch = 194, alpha = 28.13257814746897, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:51.537590	Train Epoch: 194 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:51.643965	Train Epoch: 194 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:51.740375	Train Epoch: 194 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 194 Average loss: 0.0000
+Train epoch = 195, alpha = 28.13257814746897, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:51.781904	Train Epoch: 195 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:51.893620	Train Epoch: 195 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:51.989649	Train Epoch: 195 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 195 Average loss: 0.0000
+Train epoch = 196, alpha = 28.13257814746897, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:52.029444	Train Epoch: 196 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:52.129724	Train Epoch: 196 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:52.226574	Train Epoch: 196 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 196 Average loss: 0.0000
+Train epoch = 197, alpha = 28.13257814746897, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:52.262883	Train Epoch: 197 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:52.362010	Train Epoch: 197 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:52.469403	Train Epoch: 197 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 197 Average loss: 0.0000
+Train epoch = 198, alpha = 28.13257814746897, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:52.507528	Train Epoch: 198 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:52.614904	Train Epoch: 198 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:52.712917	Train Epoch: 198 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 198 Average loss: 0.0000
+Train epoch = 199, alpha = 29.582722716600045, beta = 1e-07, gamma = 0.0001
+2021-05-16 00:18:52.753484	Train Epoch: 199 [0/6000 (0%)]	Loss: 0.000000
+2021-05-16 00:18:52.849669	Train Epoch: 199 [2560/6000 (43%)]	Loss: 0.000000
+2021-05-16 00:18:52.945833	Train Epoch: 199 [5120/6000 (87%)]	Loss: 0.000000
+====> Epoch: 199 Average loss: 0.0000
+Saving model...
+Training DONE!
+Loading dataset synthetic_functions...
+Shape X_train:  (6000, 2)
+Shape Y_train:  (6000,)
+Shape X_test:  (1000, 2)
+Shape Y_test:  (1000,)
+Dataset loaded!
+Initialization of the model...
+Scheme train: annealing
+Rep init type: fixed_length_random
+Space init: latent
+Type loss: log_dist
+Model:  AE(
+  (encoder): Encoder(
+    (hidden): ModuleList()
+    (out): Linear(in_features=2, out_features=2, bias=True)
+  )
+  (decoder): Decoder(
+    (hidden): ModuleList()
+    (out): Linear(in_features=2, out_features=2, bias=True)
+  )
+)
+Starting testing on synthetic_functions data in mode test...
+Running k-means...
+Running k-means...
+shape of s torch.Size([2, 4])
+Running k-segments...
+s1 shape:  torch.Size([18, 2])
+s2 shape:  torch.Size([18, 2])
+s_alphas shape:  torch.Size([18, 2])
+s1 shape:  torch.Size([18, 2])
+s2 shape:  torch.Size([18, 2])
+s_alphas shape:  torch.Size([18, 2])
+s1 shape:  torch.Size([2, 2])
+s2 shape:  torch.Size([2, 2])
+shape s_inter_rec_np =  (18, 2)
+i = 0, X_full shape = (1002, 2)
+i = 1, X_full shape = (1022, 2)
+i = 2, X_full shape = (1022, 2)
+i = 3, X_full shape = (1002, 2)
+i = 4, X_full shape = (1020, 2)
+i = 0, X_full shape = (1002, 2)
+i = 1, X_full shape = (1022, 2)
+i = 2, X_full shape = (1022, 2)
+i = 3, X_full shape = (1002, 2)
+i = 4, X_full shape = (1020, 2)
+['ACC = 1.0', 'NMI = 1.0', 'ARI = 1.0']
+Final testing DONE!
