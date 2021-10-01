@@ -8,8 +8,8 @@ from constants import NUM_TESTS, FILLER
 def delete_dir(path):
     """
     Performs rm -r to a given path.
-    :param path:
-    :return: None
+    Arguments:
+        path: path with the file or directory to be removed.
     """
     if os.path.isdir(path):
         shutil.rmtree(path)

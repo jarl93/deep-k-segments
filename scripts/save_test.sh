@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# script to save a test.
 if [ ! -d "./tests/$1" ];
 then
     mkdir "./tests/$1";

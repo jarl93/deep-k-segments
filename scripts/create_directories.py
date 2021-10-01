@@ -2,6 +2,9 @@ from generate_config_files import generate_list
 from helpers import create_dir
 from constants import NUM_TESTS, FILLER
 if __name__ == "__main__":
+    """
+    Creates directories for data and models.
+    """
 
     if FILLER in ["functions","clusters","lines"]:
         filler_aux = "synthetic_" + FILLER

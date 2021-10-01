@@ -1,4 +1,5 @@
 #!/bin/bash
+# script to perform multiple testing.
 base_path="./configs/$1/$1_"
 base_path_generation="./configs/$1_generation/$1_generation_"
 base_path_log="./models/$1/"

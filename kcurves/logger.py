@@ -1,7 +1,14 @@
 import sys
 from helpers import load_config
 class Logger(object):
+    """
+    Class to create a Logger object.
+    """
     def __init__(self, cfg_path):
+        """
+        Arguments:
+            cfg_path: path of the config file.
+        """
         cfg_file = load_config(cfg_path)
         log_path = cfg_file["model"]["path"]+cfg_file["tracing"]["log_name"] +".out"
         print("log_path = ", log_path)
@@ -9,6 +16,10 @@ class Logger(object):
         self.log = open(log_path, "a")
 
     def write(self, message):
+        """
+        Arguments:
+            message: message to be printed.
+        """
         self.terminal.write(message)
         self.log.write(message)
 

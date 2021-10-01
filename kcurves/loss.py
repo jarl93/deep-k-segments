@@ -6,8 +6,6 @@ import numpy as np
 import sys
 from helpers import  pairwise_distances, pairwise_distances_segments, get_hidden_layers
 
-# As long as PyTorch operations are employed the loss.backward should work
-
 def L1_regularization(autoencoder, x, lambda_):
     """
     Computes the L1 regularization loss for the autoencoder (sparse autoencoder).
@@ -34,13 +32,17 @@ def L1_regularization(autoencoder, x, lambda_):
 
 def KL_loss(dist, alpha_, gamma_, p_ref):
     """
-
-    :param h:
-    :param alpha_:
-    :param gamma_:
-    :return:
-    The implementaion can seem freaky, but it's because the implementation of the function torch.nn.KLDivLoss.
+    Performs the KL divergence loss between the the reference distribution p_ref and the softmax of the dist,
+    which induces a distribution over dist.
+    The implementation can seem freaky, but it's due to the implementation of the function torch.nn.KLDivLoss.
     Check out the documentation in https://pytorch.org/docs/stable/generated/torch.nn.KLDivLoss.html
+    Arguments:
+        dist: tensor with distances.
+        alpha_: hyperparameter for the softmax.
+        gamma_: hyperparameter for the loss.
+        p_ref: reference distribution.
+    Outputs:
+        KL_last_layer_loss: KL divergence loss.
     """
     q_softmax = F.softmax(-1.0 * alpha_ * dist, dim=1)
     q_mean = torch.mean(q_softmax, dim = 0)
@@ -52,9 +54,13 @@ def KL_loss(dist, alpha_, gamma_, p_ref):
 def check_non_neagtive_loss(loss, name, x, x_reconstructed):
     """
     Checks that a given loss is non-negative.
-    :param loss:
-    :param name:
-    :return:
+    Arguments:
+        loss: loss to be checked.
+        name: name of the loss.
+        x: data input.
+        x_reconstructed: data input reconstructed.
+    Outputs:
+        loss: same loss if the sanity check was passed.
     """
     eps = -1e-3
     if loss.item() <= eps:
@@ -69,6 +75,24 @@ def check_non_neagtive_loss(loss, name, x, x_reconstructed):
         return loss
 
 def loss_function(model, x, x_reconstructed, h, rep, alpha_, beta_, gamma_, type_rep, type_loss):
+    """
+    Main loss function of the model.
+    Arguments:
+        model: model where the loss is applied.
+        x: data input.
+        x_reconstructed: data input reconstructed.
+        h: latent variable.
+        rep: current segments (of the training).
+        alpha_: hyperparameter for the softmax.
+        beta_: hyperparamter for the relaxation of the distance to the representatives.
+        gamma_: hyperparameter for the loss of the length of the representatives.
+        type_rep: type of representatives, it could be points or representatives.
+        type_loss: type of loss to be applied.
+    Outputs:
+        loss_batch: total loss of the batch.
+        loss_rec: reconstruction loss.
+        loss_dist_log: loss of the relaxation of the distance to the representatives.
+    """
     # Compute the MSE loss between the input and the reconstruction
     loss_MSE = nn.MSELoss()
     loss_rec = loss_MSE(x, x_reconstructed)
@@ -109,133 +133,6 @@ def loss_function(model, x, x_reconstructed, h, rep, alpha_, beta_, gamma_, type
         loss_dist_log = beta_ * torch.mean(torch.sum(I_relaxed * torch.log(dist+eps), dim = 1))
         loss_batch += loss_dist_log
         return loss_batch, loss_rec, loss_dist_log
-
-
-    #----------------------------------Frozen code ------------------------------------------------#
-    # elif type_loss == "entropy":
-    #
-    #     dist_entropy = F.softmax(-alpha_ * dist, dim=1) * F.log_softmax(-alpha_ * dist, dim=1)
-    #     loss_entropy = -1.0 * beta_ * dist_entropy.sum()
-    #     loss_entropy = check_non_neagtive_loss(loss_entropy, "loss_entropy")
-    #     loss_batch += loss_entropy
-    #     loss_KL = KL_loss(dist, alpha_, gamma_, p_ref)
-    #     loss_KL = check_non_neagtive_loss(loss_KL, "loss_KL")
-    #     loss_batch += loss_KL
-    #     return loss_batch, loss_rec, loss_entropy, loss_KL
-
-
-# ---------------------------------------------Frozen code -------------------------------------------------------------
-# def KL_regularization(autoencoder, x, gamma_, rho_scalar):
-#     """
-#     Computes the KL divergence regularization loss by means of a Bernoulli distribution.
-#     The hyperparameter rho is assumed to be the true average of the activation of a
-#     neuron in each activation layer, rho_hat is the estimated average over the sample batch,
-#     then, the KL divergence is computed between the two Bernoulli distributions parametrized by
-#     rho and rho_hat.
-#     :param autoencoder: auto-encoder in which the training is being run.
-#     :param x: input of the auto-encoder.
-#     :param gamma_: hyperparameter to scale the regularization term.
-#     :param rho_scalar: hyperparameter to define the true Bernoulli distribution rho.
-#     :return: KL divergence regularization loss.
-#     """
-#     layers = get_hidden_layers(autoencoder)
-#     loss_KL = 0
-#     for layer in layers:
-#         # print("Shape x: {}".format(x.shape))
-#         x = layer(x)
-#         if isinstance(layer, nn.ReLU):
-#             # compute the KL divergence
-#             rho_hat = torch.mean(torch.sigmoid(x), 0)
-#             rho = rho_scalar * torch.ones_like(rho_hat)
-#             # print("rho: ", rho)
-#             # print("rho_hat: ", rho_hat)
-#             loss_KL += torch.sum(rho*torch.log(rho/rho_hat) + (1-rho)*torch.log((1-rho)/(1-rho_hat)))
-#
-#
-#     # sys.exit("Stopping script!")
-#
-#     # scale by gamma
-#     loss_KL *= gamma_
-#
-#     return loss_KL
-#
-# def entropy_regularization(encoder, h, beta_):
-#     """
-#     Computes the entropy regularization loss for the last layer of the encoder
-#     by applying the softmax function to the last layer and then applying the entropy loss.
-#     Arguments:
-#         encoder: encoder in which the training is being run.
-#         h: output of the encoder (latent variable).
-#         beta_: hyperparameter to scale the regularization term.
-#     Outputs:
-#         loss_entropy: entropy regularization loss of the encoder (last layer).
-#
-#     """
-#     # compute entropy loss for the last layer of the encoder
-#     h_ent = None
-#     if encoder.last_nn_layer_encoder_name == 'Identity':
-#         h_ent = F.softmax(h, dim = 1) * F.log_softmax(h, dim = 1)
-#         #TODO: add code for: h_ent = F.softmax(h, dim=1) * h
-#     elif encoder.last_nn_layer_encoder == 'Softmax':
-#         h_ent = h * torch.log(h)
-#
-#     loss_entropy = -1.0 * h_ent.sum()
-#
-#     rho_hat = F.softmax(h, dim = 1)
-#     rho = 0.5 * torch.ones_like(rho_hat)
-#     loss_KL = torch.sum(rho * torch.log(rho / rho_hat) + (1 - rho) * torch.log((1 - rho) / (1 - rho_hat)))
-#
-#     loss_entropy += loss_KL
-#
-#     # scale by lambda
-#     loss_entropy *= beta_
-#
-#     return loss_entropy
-#
-# def loss_function(x, x_reconstructed, h, autoencoder, scalar_hyperparameters, regularization_types = None):
-#     """
-#     Computes the loss_function of the autoencoder.
-#     Arguments:
-#         x_reconstructed: reconstructed input.
-#         x: input tensor.
-#         h: output of the encoder (latent variable).
-#         autoencoder: auto-encoder in which the training is being run.
-#         scalar_hyperparameters: list of hyperparameters to scale the regularization terms, depending on
-#             the regularization type. The description of the parameters is the following:
-#             - lambda_: scalar for the  L1 regularization.
-#             - beta_: scalar for the entropy regularization.
-#             - gamma_: scalar for the KL divergence regularization.
-#             - rho_: hyperparamter for the true Bernoulli distribution used for the KL-divergence regularization.
-#         regularization_types: list of boolean values depending on whether the regularization is activated or not.
-#             The regularization types are the following:
-#             - reg_L1: boolean to activate the regularization L1.
-#             - reg_KL: boolean to activate the regularization KL-divergence.
-#             - reg_entropy: boolean to activate the entropy regularization.
-#
-#     Outputs:
-#         loss_batch: loss of the batch depending on the type of the regularization used.
-#
-#     """
-#
-#     lambda_, beta_, gamma_, rho_ = scalar_hyperparameters
-#     reg_L1, reg_KL, reg_entropy = regularization_types
-#
-#     # Compute the MSE loss between the input and the reconstruction
-#     loss_MSE = nn.MSELoss()
-#     loss_batch = loss_MSE(x, x_reconstructed)
-#
-#     if regularization_types is not None:
-#         if reg_L1:
-#             loss_L1 = L1_regularization(autoencoder, x, lambda_)
-#             loss_batch += loss_L1
-#         if reg_KL:
-#             loss_KL = KL_regularization(autoencoder, x, gamma_, rho_)
-#             loss_batch += loss_KL
-#         if reg_entropy:
-#             loss_entropy = entropy_regularization(autoencoder.encoder, h, beta_)
-#             loss_batch += loss_entropy
-#
-#     return loss_batch
 
 
 

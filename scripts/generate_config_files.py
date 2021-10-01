@@ -7,7 +7,7 @@ TYPE_REP, TYPE_LOSS, FIXED_LENGTH_START, PERCENTAGE_K, FULL_TRAINING, VISUALIZAT
 
 def generate_list(str_, num_tests, char):
     """
-    Add documentation.
+    Generates a list of names (of files) with an enumeration as a suffix.
     :param str_:
     :param num_tests:
     :param char:

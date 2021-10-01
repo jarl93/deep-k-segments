@@ -1,5 +1,5 @@
 """
-Constants
+Constants to perform training and test (it works in multiple tests mode as well).
 """
 import torch
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")

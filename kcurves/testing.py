@@ -15,11 +15,15 @@ from initialization import fixed_length_initialization, k_means_PCA
 
 def test(cfg_path, model, data_set, mode_forced, mode, lap = 0, lap_str = "0"):
     """
-    Add documentation.
-    :param cfg_path:
-    :param model:
-    :param data_set:
-    :return:
+    Function that performs the test of the autoencoder.
+    Arguments:
+        cfg_path: path of the config file, which contains the hyperparameters of the training.
+        model: model (autoencoder) to be trained.
+        data_set: data set to train the model.
+        mode_forced: flag to test the model with the training or test data.
+        mode: mode of the evaluation, it can be either evolution or final testing.
+        lap: validation lap.
+        lap_str: string of variable lap.
     """
 
     cfg_file = load_config(cfg_path)

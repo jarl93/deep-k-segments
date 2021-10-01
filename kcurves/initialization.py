@@ -10,13 +10,7 @@ from numpy import linalg as LA
 from clustering import k_means, k_segments
 def init_model(cfg_path, verbose=True):
     """
-    Add documentation
-    :param encoder_layer_sizes:
-    :param decoder_layer_sizes:
-    :param input_dim:
-    :param latent_dim:
-    :param verbose:
-    :return:
+    Add documentation.
     """
     cfg_file = load_config(cfg_path)
     encoder_layer_sizes = cfg_file["model"]["encoder"]["layer_sizes"]
@@ -56,7 +50,9 @@ def init_model(cfg_path, verbose=True):
     return model
 
 def get_rep(cfg_path, X):
-
+    """
+    Add documentation.
+    """
     cfg_file = load_config(cfg_path)
     input_dim = cfg_file["model"]["input_dim"]
     latent_dim = cfg_file["model"]["latent_dim"]
@@ -111,6 +107,9 @@ def get_rep(cfg_path, X):
 
 
 def xavier_initialization(model):
+    """
+    Add documentation.
+    """
     layers = get_hidden_layers(model)
     for layer in layers:
         if isinstance(layer, torch.nn.Linear):
@@ -120,6 +119,9 @@ def xavier_initialization(model):
     return model
 
 def fixed_length_initialization(min_init, diff_init, fixed_length, K, dim):
+    """
+    Add documentation.
+    """
 
     s1 = min_init + diff_init * np.random.rand(K, dim)
     s_dir = min_init + diff_init * np.random.rand(K, dim)
@@ -131,12 +133,18 @@ def fixed_length_initialization(min_init, diff_init, fixed_length, K, dim):
 
 
 def forgy_initialization(X, K):
+    """
+    Add documentation.
+    """
     N = X.shape[0]
     idx = np.random.choice(N, K)
     centers_init = X[idx]
     return centers_init
 
 def get_segment_PCA(neigh, center):
+    """
+    Add documentation.
+    """
     if torch.isnan(neigh).any():
         raise ValueError(" neigh has  nan values!")
 
@@ -154,6 +162,9 @@ def get_segment_PCA(neigh, center):
     return s1, s2
 
 def kmeans_plusplus_PCA(X, K, percentage_K):
+    """
+    Add documentation.
+    """
 
     N = X.shape[0]
     X = torch.from_numpy(X).to(DEVICE)
@@ -191,6 +202,9 @@ def kmeans_plusplus_PCA(X, K, percentage_K):
     return s
 
 def k_means_PCA(X, K, percentage_K):
+    """
+    Add documentation.
+    """
 
     # get the centroids by means of k-means
     centers_, _ = k_means(X = X , centers_init='k-means++', n_clusters = K)
@@ -200,6 +214,9 @@ def k_means_PCA(X, K, percentage_K):
 
 
 def get_segments_from_centers(centers_, X, K, percentage_K):
+    """
+    Add documentation.
+    """
 
     centers = torch.from_numpy(centers_).to(DEVICE)
     N = X.shape[0]

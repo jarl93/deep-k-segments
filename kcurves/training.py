@@ -15,12 +15,12 @@ import numpy as np
 
 def train(cfg_path, model, data_set, verbose = True):
     """
-    Add documentation.
-    :param cfg_path:
-    :param model:
-    :param data_set:
-    :param verbose:
-    :return:
+    Function that performs the training of the autoencoder.
+    Arguments:
+        cfg_path: path of the config file, which contains the hyperparameters of the training.
+        model: model (autoencoder) to be trained.
+        data_set: data set to train the model.
+        verbose: flag to trace the training.
     """
     cfg_file = load_config(cfg_path)
 
@@ -169,17 +169,6 @@ def train(cfg_path, model, data_set, verbose = True):
                     writer.add_scalar('loss_rec', loss_rec.item(), epoch * N + batch_idx)
                     writer.add_scalar('loss_dist', loss_dist.item(), epoch * N + batch_idx)
 
-            #------------------------------------- frozen code ------------------------------------------------------#
-            # elif type_loss == "entropy":
-            #     loss, loss_rec, loss_ent, loss_KL = loss_function(x, x_reconstructed, h, dist, centers, alpha_, beta_,
-            #                                                       gamma_, type_rep, type_loss, p_ref)
-            #
-            #     if batch_idx % batch_frequency_loss == 0:
-            #         writer.add_scalar('loss_training', loss.item(), epoch * N + batch_idx)
-            #         writer.add_scalar('loss_rec', loss_rec.item(), epoch * N + batch_idx)
-            #         writer.add_scalar('loss_ent', loss_ent.item(), epoch * N + batch_idx)
-            #         writer.add_scalar('loss_KL', loss_KL.item(), epoch * N + batch_idx)
-
             loss.backward()
             train_loss += loss.item()
             optimizer.step()
@@ -202,4 +191,4 @@ def train(cfg_path, model, data_set, verbose = True):
 
 
     print("Training DONE!")
-    return None
+    return

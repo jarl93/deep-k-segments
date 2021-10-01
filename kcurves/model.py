@@ -99,7 +99,6 @@ class Encoder(nn.Module):
         for k in range(len(layer_sizes) - 1):
             self.hidden.append(nn.Linear(layer_sizes[k], layer_sizes[k + 1]))
             self.hidden.append(nn.ReLU())
-            #self.hidden.append(InverseSigmoid())
 
         # Output layer from the encoder
         self.out = nn.Linear(layer_sizes[-1], latent_dim)
@@ -141,7 +140,6 @@ class Decoder(nn.Module):
                                             the output will be the reconstructed input.
 
         """
-
         # Hidden layers
         self.hidden = nn.ModuleList()
 
@@ -183,20 +181,3 @@ class Decoder(nn.Module):
         x = self.out(x)
 
         return x
-
-
-class InverseSigmoid(nn.Module):
-
-    def __init__(self):
-        super().__init__()
-
-    def forward(self, x):
-
-        eps = 1e-6
-        x = torch.clamp(x, eps, 1-eps)
-        y = -torch.log((1 / x) - 1)
-
-        if torch.isnan(y).any():
-            raise ValueError("Output has nan values!!!")
-
-        return y

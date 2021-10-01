@@ -14,6 +14,7 @@ def load_data_set(cfg_path, verbose = True):
     Arguments:
         cfg_path: config path of the config file.
     Output:
+        data_set: data set loaded with training and test set.
 
     """
     # load config file

@@ -23,8 +23,9 @@ def imshow(list_images):
     """
     Plots the original image and the reconstructed image side by side.
     Arguments:
-        img_original: original image from the dataset.
-        img_reconstructed: reconstructed image, output of the autoencoder.
+        list_images: list of pairs of images, the pair is composed of the original and reconstructed image.
+    Outputs:
+        fig: the figure created after plotting the images from the list.
     """
     num_images = len(list_images)
     fig = plt.figure(figsize=(10, 10))
@@ -60,6 +61,9 @@ def plot_X2D_visualization(X, labels, title, num_classes, cluster_centers=None):
         title: string with the title of the graphic.
         num_classes: Number of classes.
         cluster_centers: Cluster centers, if any, to be plotted.
+    Outputs:
+        fig: the figure created after plotting of the data in 2D.
+
     """
     if X.shape[1] > 2:
         X_2D = run_PCA(X)
@@ -89,17 +93,25 @@ def plot_2D_visualization_clusters(list_X, labels, list_predictions, list_rep, l
                                    list_titles, list_metrics, num_classes,type_rep, x_label,
                                    visualization):
     """
-    Visualizes outputs (inputs) of the auto-encoder.
-    :param list_X: List [X_input, X_reconstructed, H, softmax(H)], where:
-        -X_input is the input data
-        -X_reconstructed is the reconstructed data(output of the auto-encoder)
-        -H is the latent vector.
-        -softmax(H) is the softmax over the latent vector.
-    :param list_var: values x_i, y_i and z_ent and z_dist tp plot the objective functions.
-    :param labels: true labels of the data.
-    :param titles: strings with the titles for each graphic.
-    :param num_classes: Number of classes.
-    :return: fig: figure with the plots.
+    Visualizes outputs and inputs of the several algorithms.
+    Arguments:
+        list_X: List [X_input, X_reconstructed, H, softmax(H)], where:
+            -X_input is the input data
+            -X_reconstructed is the reconstructed data(output of the auto-encoder)
+            -H is the latent vector.
+            -softmax(H) is the softmax over the latent vector.
+        labels: true labels of the data.
+        list_predictions: List []
+        list_rep:
+        list_inter:
+        list_titles:
+        list_metrics:
+        num_classes: number of classes of the data.
+        type_rep:
+        x_label:
+        visualization:
+    Outputs:
+        fig: figure with all the plots.
     """
     cdict_points = {0: 'silver', 1: 'lightcoral', 2: 'peachpuff', 3: 'bisque', 4: 'cornsilk',
                     5: 'lightgreen', 6: 'lightcyan', 7: 'lightskyblue', 8: 'thistle', 9: 'magenta',
@@ -309,6 +321,8 @@ def plot_functions(list_functions, title):
     Arguments:
         list_functions: list with all the functions to be plotted.
         title: title of the graphic.
+    Outputs:
+        fig: Figure with the plot with the functions plotted.
 
     """
     plt.switch_backend('agg')
@@ -326,7 +340,16 @@ def plot_functions(list_functions, title):
 
     return fig
 def get_interpolation(s1, s2, num_points):
+    """
+     Computes equidistant (finite) points between two ending points.
+     Arguments:
+         s1: initial point of the segment.
+         s2: end point of the segment.
+         num_points: number of points within the segment to be computed.
+     Outputs:
+         s_inter: tensor with the equidistant points.
 
+     """
     dim0 = s1.shape[0]
     dim1 = s1.shape[1]
     s1 = s1.repeat(num_points - 1, 1)
@@ -352,13 +375,12 @@ def transform_low_to_high(X_low, F_non_linear, list_W):
     See below for the other parameters.
     Arguments:
         X_low: data in low dimensional space.
-        list_W: List of matrices for the linear transformation to be applied.
-        F_non_linear: Non linear function applied in the formula.
+        list_W: list of matrices for the linear transformation to be applied.
+        F_non_linear: non linear function applied in the formula.
     Outputs:
         X_high: data in a higher dimensional space.
     """
-    # Apply the transformation to the normalized data
-    # by using the matrices stored in the list
+    # apply the transformation to the normalized data by using the matrices stored in the list
     vec_temp = X_low.T
     for W in list_W:
         vec_temp = F_non_linear(W @ vec_temp)
@@ -369,12 +391,12 @@ def transform_low_to_high(X_low, F_non_linear, list_W):
 
 def run_PCA(X, n_components=2):
     """
-    Runs PCA given the data (numpy array).
+    Runs PCA given a matrix data (numpy array).
     Arguments:
         X: data in the in high dimension.
-        n_components: Number of components to keep.
-     Outputs:
-        X_pca: Projection of the data in n_components as a result of PCA.
+        n_components: number of components to be considered in the PCA.
+    Outputs:
+        X_pca: projection of the data in n_components as a result of PCA.
     """
     pca = PCA(n_components=n_components)
     pca_trans = pca.fit(X)
@@ -384,6 +406,13 @@ def run_PCA(X, n_components=2):
 
 def run_TSNE(X, n_components=2):
     """
+    Runs the TSNE (https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding) algorithm to
+    reduce the dimensionality of a given data matrix.
+    Arguments:
+        X: data in the in high dimension.
+        n_components: number of components to be considered for the TSNE.
+    Outputs:
+        X_tsne: data matrix after applying TSNE.
     """
     X_tsne = TSNE(n_components = n_components, random_state=0).fit_transform(X)
 
@@ -395,7 +424,7 @@ def sigmoid(x):
     Arguments:
         x: numpy array.
     Output:
-        : numpy array with the sigmoid function values computed.
+        _ : numpy array with the sigmoid function values computed.
 
     """
     return 1 / (1 + np.exp(-x))
@@ -403,9 +432,10 @@ def sigmoid(x):
 def get_softmax(X_2D):
     """
     Computes the softmax of a numpy array or a torch tensor.
-    :param X_2D: 2-dimensional array (N, 2).
-    :return:
-        - X_2D_softmax: numpy array with the softmax of X_2D.
+    Arguments:
+        X_2D: 2-dimensional array.
+    Outputs:
+        X_2D_softmax: numpy array or torch tensor after applying the softmax to X_2D.
     """
 
     if type(X_2D) is np.ndarray:
@@ -421,13 +451,15 @@ def get_softmax(X_2D):
 
 def softmax_pair(x, y, absolute =True, alpha=None):
     """
-    Computes the softmax of the pair (x,y).
-    :param x: x-coordinate (float).
-    :param y: y-coordinate (float).
-    :param alpha: temperature parameter (float).
-    :return:
-        -a: softmax x-coordinate
-        -b: softmax y-coordinate
+    Computes the softmax of a pair (x,y).
+    Arguments:
+        x: x-coordinate (float).
+        y: y-coordinate (float).
+        absolute: boolean flag to indicate if the absolute value operation must be applied.
+        alpha: temperature parameter (float).
+    Outputs:
+        a: softmax in the  x-coordinate.
+        b: softmax in the y-coordinate.
     """
     if absolute:
         x = np.absolute(x)
@@ -444,31 +476,40 @@ def softmax_pair(x, y, absolute =True, alpha=None):
 
 def entropy_pair(x, y):
     """
-    Computes the cross entropy of a pair(x,y)
-    :param x: x-coordinate (float).
-    :param y: y-coordinate (float).
-    :return: entropy of the pair.
+    Computes the cross entropy of a pair(x,y).
+    Arguments:
+        x: x-coordinate (float).
+        y: y-coordinate (float).
+    Outputs:
+        _: entropy of the pair.
     """
     return -x * np.log(x) - y * np.log(y)
 
 def distance_axes_pair(x, y):
     """
-
-    :param x:
-    :param y:
-    :return:
+    Computes the distance d as follows:
+        d = exp^(x)/(exp^(x) + exp^(y)) * |x| + exp^(y)/(exp^(x) + exp^(y)) * |y|.
+    Arguments:
+        x: x-coordinate (float).
+        y: y-coordinate (float).
+    Outputs:
+        _: distance d as described above given the pair (x,y).
     """
     a, b = softmax_pair(x, y)
     return a * np.absolute(x) + b * np.absolute(y)
 
 # TODO: Change the name to pairwise_distance_points
 def pairwise_distances(x, y):
-    '''
-    Arguments: x is a (N,d) tensor
-           y is a (M,d) tensor
-    Output: dist is a (N,M) tensor where dist[i,j] is the square L2-norm
-            between x[i,:] and y[j,:] => dist[i,j] = ||x[i,:]-y[j,:]||^2
-    '''
+    """
+    Compute all the distances between the points x[i,:] and y[j,:], where x is a
+    matrix with N points and y a matrix with M points, with 0<=i<N, 0<=j<N.
+    Arguments:
+        x: tensor of dimensions (N,d).
+        y: tensor of dimensions (M,d).
+    Output:
+        dist: a (N,M) tensor where dist[i,j] is the square L2-norm.
+              between x[i,:] and y[j,:] => dist[i,j] = ||x[i,:]-y[j,:]||^2
+    """
     x_norm = (x**2).sum(1).view(-1, 1)
     y_t = torch.transpose(y, 0, 1)
     y_norm = (y**2).sum(1).view(1, -1)
@@ -477,6 +518,16 @@ def pairwise_distances(x, y):
     return torch.clamp(dist, 0.0, np.inf)
 
 def pairwise_distances_segments(X, s):
+    """
+    Compute all the distances between the points x[i,:] and the segments
+    s[j,:], where X is a matrix with N points and s is a matrix with M segments,
+    with 0<=i<N, 0<=j<N.
+    Arguments:
+        X: tensor of dimensions (N,d).
+        s: tensor of dimensions (M,2d).
+    Output:
+        dist: a (N,M) tensor where dist[i,j] is the distance between the point x[i,:] and the segment s[j,:].
+    """
 
     dim = X.shape[1]
 
@@ -487,7 +538,6 @@ def pairwise_distances_segments(X, s):
     eps = 1e-9
     diff_norm = diff / (norm + eps)
 
-    # TODO: Use matrices to avoid for loop if possible
     for i in range(diff.shape[0]):
         s1_i = s[i, :dim].repeat(X.shape[0], 1)
         diff_norm_i = diff_norm[i, :].repeat(X.shape[0], 1)
@@ -509,8 +559,10 @@ def pairwise_distances_segments(X, s):
 def load_config(path="configs/default.yaml") -> dict:
     """
     Loads and parses a YAML configuration file.
-    :param path: path to YAML configuration file
-    :return: configuration dictionary
+    Arguments:
+        path: path to YAML configuration file.
+    Outputs:
+        cfg: configuration dictionary.
     """
     with open(path, 'r') as ymlfile:
         cfg = yaml.safe_load(ymlfile)
@@ -519,9 +571,11 @@ def load_config(path="configs/default.yaml") -> dict:
 
 def create_writer(path_log_dir):
     """
-
-    :param path_log_dir:
-    :return:
+    Creates a writer for tensorboard given a path.
+    Arguments:
+        path_log_dir: path for the writer.
+    Outputs:
+        writer: writer object created.
     """
 
     if not os.path.isdir(path_log_dir):
@@ -534,10 +588,11 @@ def create_writer(path_log_dir):
 
 def get_hyperparameters(cfg_path):
     """
-    Extracts the hyperparameters to make a dictionary out of it.
-    :param cfg_path: path for the config file.
-    :return:
-        - dic_hyperparameters: dictionary with the hyperparameters.
+    Extracts the hyperparameters from the config file to make a dictionary out of them.
+    Arguments:
+        cfg_path: path of the config file.
+    Outputs:
+        dic_hyperparameters: dictionary with the hyperparameters.
     """
 
     cfg_file = load_config(cfg_path)
@@ -567,8 +622,10 @@ def make_string_from_dic(dic):
     using a "_" as separator.
         For example:
         dic = {key1: val1, key2: val2, key3: val3 } => str_ = "key1=val1_key2=val2_key3=val3"
-    :param dic: dictionary to be applied the transformation.
-    :return: str_: string that represents the dictionary given.
+    Arguments:
+        dic: dictionary where the transformation will be applied.
+    Outputs:
+        str_: string that represents the given dictionary.
     """
     str_ = ""
     for key, value in dic.items():
@@ -581,10 +638,11 @@ def make_string_from_dic(dic):
 def add_zeros (n, lim):
     """
     Adds zeros at the beginning of a number w.r.t to lim.
-    :param n: number to add zeros at the beginning.
-    :param lim: upper bound for n.
-    :return:
-        - num: string with the number with zeros at the beginning.
+    Arguments:
+        n: number to add zeros at the beginning.
+        lim: upper bound for n.
+    Outputs:
+        num: string with the number with zeros at the beginning.
     """
     num = ""
     # put 0's at the beginning w.r.t. lim
@@ -598,26 +656,36 @@ def add_zeros (n, lim):
 
 def freeze_module (module):
     """
-    :param module:
-    :return:
+    Freezes a given layer.
+    Arguments:
+        module: name of the layer to be frozen.
     """
     for param in module.parameters():
         param.requires_grad = False
 
-    return None
-
+    return
 
 def unfreeze_module(module):
     """
-    :param module:
-    :return:
+    Unfreezes a given layer.
+    Arguments:
+        module: name of the layer to be unfrozen.
     """
     for param in module.parameters():
         param.requires_grad = True
 
-    return None
+    return
 
 def Read_Two_Column_File(file_name, type_np):
+    """
+    Reads a file with two column format.
+    Arguments:
+        file_name: name of the file to be read.
+        type_np: data type of the columns.
+    Outputs:
+        X.T: numpy matrix with the data (from the file) stored.
+    """
+
     with open(file_name, 'r') as f_input:
         csv_input = csv.reader(f_input, delimiter=' ', skipinitialspace=True)
         x = []
@@ -634,6 +702,14 @@ def Read_Two_Column_File(file_name, type_np):
     return X.T
 
 def Read_One_Column_File(file_name, type_np):
+    """
+    Reads a file with one column format.
+    Arguments:
+        file_name: name of the file to be read.
+        type_np: data type of the column.
+    Outputs:
+        entries: numpy matrix with the data (from the file) stored.
+    """
     with open(file_name, 'r') as f_input:
         csv_input = csv.reader(f_input, delimiter=' ', skipinitialspace=True)
         entries = []
@@ -648,14 +724,16 @@ def Read_One_Column_File(file_name, type_np):
 def get_hidden_layers(autoencoder):
     """
     Gets the hidden layers of a given autoencoder.
-    :param autoencoder:
-    :return: lyers: list with the hidden layers
+    Arguments:
+        autoencoder: autoencoder as a stack of layers.
+    Outputs:
+        layers: list with the hidden layers.
     """
-    # Get the hidden layers from the encoder and the decoder
+    # get the hidden layers from the encoder and the decoder
     layers_encoder = list(autoencoder.encoder.children())
     layers_decoder = list(autoencoder.decoder.children())
 
-    # Most of the layers are embedded in a nn.ModuleList(),
+    # most of the layers are embedded in a nn.ModuleList(),
     # but we should consider as well the output layers
     # (linear and non-linear) from the encoder and decoder
     layers = list(layers_encoder[0]) + [layers_encoder[1]] \
@@ -665,26 +743,50 @@ def get_hidden_layers(autoencoder):
 
 # metrics to evaluate quality of the clustering
 def get_purity(labels, predictions):
+    """
+     Gets the purity or accuracy of a clustering algorithm given the labels and predictions.
+     Arguments:
+         labels: true labels of the data.
+         predictions: predicted labels of the data.
+     Outputs:
+         purity_score: score that represents the accuracy of a clustering algorithm.
+     """
 
-    #Based on the code from https://github.com/XifengGuo/IDEC-toy/blob/master/DEC.py)
+    #based on the code from https://github.com/XifengGuo/IDEC-toy/blob/master/DEC.py)
     assert len(labels) == len(predictions)
     d = max(np.max(labels), np.max(predictions)) + 1
     w = np.zeros((d,d))
     for i in range(len(predictions)):
         w[predictions[i], labels[i]] += 1
 
-    ind = linear_assignment(w.max() - w) # Optimal label mapping based on the Hungarian algorithm
+    ind = linear_assignment(w.max() - w) # optimal label mapping based on the Hungarian algorithm
     i, j = zip(*ind)
     purity_score = np.sum(w[i,j]) / len(predictions)
 
     return np.round(purity_score, 3)
 
 def get_NMI(labels, predictions):
+    """
+     Computes the NMI (normalized mutual information) of a clustering algorithm given the labels and predictions.
+     Arguments:
+         labels: true labels of the data.
+         predictions: predicted labels of the data.
+     Outputs:
+         NMI: score that represents the NMI of a clustering algorithm.
+     """
 
     NMI = normalized_mutual_info_score(labels, predictions)
     return np.round(NMI, 3)
 
 def get_ARI(labels, predictions):
+    """
+     Computes the ARI (adjusted Rand index) of a clustering algorithm given the labels and predictions.
+     Arguments:
+         labels: true labels of the data.
+         predictions: predicted labels of the data.
+     Outputs:
+         ARI: score that represents the ARI of a clustering algorithm.
+     """
 
     ARI = adjusted_rand_score (labels, predictions)
     return np.round(ARI, 3)
