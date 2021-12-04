@@ -1,5 +1,5 @@
 # deep-k-segments
-This project is the implementation of a deep clustering algorithm that combines the idea of using segments as representatives and auoencoders to find appropriate representations in the latent space of the autoencoder to cluster high-dimensional data.
+This project is the implementation of a deep clustering algorithm that combines the idea of using segments as representatives and autoencoders to find appropriate representations in the latent space of the autoencoder to cluster high-dimensional data.
 
 # Installation
 1. Please install the libraries needed listed in the requirements.txt file.
